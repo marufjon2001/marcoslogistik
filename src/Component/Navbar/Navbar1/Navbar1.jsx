@@ -21,7 +21,7 @@ const Navbar1 = () => {
         </Box>
         <Box sx={{display: 'flex',alignItems: 'center',gap: '15px'}}>
         <Fab style={{backgroundColor: '#F2F4F5',flex: 'none',order: '0',flexGrow: '0',width: '35px',height: '17px',boxShadow: 'none'}} color="primary" aria-label="add">
-         <PhoneIcon style={{fontSize: '20px'}}/>
+         <PhoneIcon style={{fontSize: '22px'}}/>
         </Fab>
         <Typography style={{fontStyle: 'Inter',fontWeight: '500',fontSize: '15px',lineHeight: '16px',color: 'white',flex: 'none',order: '1',flexGrow: '0'}}>+998 (77) 777-46-00</Typography>
         </Box>
