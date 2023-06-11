@@ -16,3 +16,12 @@ code {
   display: flex;
   gap: 25px;
 }
+.Москва {
+  width: 30%;
+  background-color: #FCFCFD;
+  background: linear-gradient(83.59deg, #FCFCFD 36.52%, #FCFCFD 98.8%);
+  box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.12)
+}
+.Москва img {
+  border-radius: 50px;
+}
