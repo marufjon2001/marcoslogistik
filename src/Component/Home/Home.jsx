@@ -4,6 +4,7 @@ import tranck from "../images/Home/tranck.png"
 import xarita from "../images/Xarita/xarita.png"
 import moskva from "../images/Xarita/moskva.png"
 import moskva1 from "../images/Xarita/moskva1.png"
+import App from "../Home/Swiper/App"
 
 const Home = () => {
     return (
@@ -45,8 +46,9 @@ const Home = () => {
              </Box>
            </Box>
            <Box>
-            
+            <App/>
            </Box>
+           
         </Box>
     );
 }
