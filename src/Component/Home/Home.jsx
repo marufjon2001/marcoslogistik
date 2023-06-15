@@ -9,6 +9,11 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import photo from "../images/Home/photo.avif"
+import img1 from "../images/Home/img1.jpeg"
+import imglar from "../images/Home/imglar.jpg"
+import { Carousel } from 'antd';
+import "./home.css"
 
 const Home = () => {
   const [text, setext] = useState([
@@ -17,7 +22,7 @@ const Home = () => {
       textlar:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio explicabo aperiam inventore",
       textweidth: "Как подготовить посылку",
-      activee: true,
+      activee: false,
     },
     {
       numer: "02",
@@ -66,6 +71,18 @@ const Home = () => {
           sonItem.active = true;
         } else {
           sonItem.active = false;
+        }
+        return sonItem;
+      });
+    });
+  };
+  let menuitemm = (item) => {
+    setext(() => {
+      return text.map((sonItem) => {
+        if (sonItem.numer === item.numer) {
+          sonItem.activee = true;
+        } else {
+          sonItem.activee = false;
         }
         return sonItem;
       });
@@ -320,9 +337,9 @@ const Home = () => {
           ))}
         </Box>
       </Box>
-
+       {/*------------------------ collapse----------------------------- */}
       <Box sx={{ display: "flex", justifyContent: "center" }} mt={10}>
-        <Box sx={{ width: "50%", border: "2px solid black" }}>
+        <Box sx={{ width: "50%"}}>
           {text.map((item, index) => (
             <Box>
               <Accordion>
@@ -333,23 +350,25 @@ const Home = () => {
                 >
                   <Box sx={{ display: "flex", gap: "20px" }}>
                     <Typography
+                    onClick={()=>menuitemm(item)}
                       style={{
                         fontFamily: "Fraunces",
                         fontWeight: "900",
                         fontSize: "20px",
                         lineHeight: "32px",
-                        color: `${item.active ? "#333D4B" : "#83888F"}`,
+                        color: `${item.activee ? "#EA412B" : "#83888F"}`,
                       }}
                     >
                       {item.numer}
                     </Typography>
                     <Typography
+                    onClick={()=>menuitemm(item)}
                       style={{
                         fontFamily: "Inter",
                         fontWeight: "500",
                         fontSize: "16px",
                         lineHeight: "24px",
-                        color: "#23262F",
+                        color: `${item.activee ? "#333D4B" : "#83888F"}`
                       }}
                     >
                       {item.textweidth}
@@ -373,7 +392,30 @@ const Home = () => {
               </Accordion>
             </Box>
           ))}
+        <br /><br />
         </Box>
+      </Box>
+      {/*----------------------------- Carusel ------------------------------*/}
+      <Box sx={{width: '100%',position: 'relative'}}>
+        <Box sx={{position: 'absolute',zIndex: '1000'}}>
+          <Box>
+            <Box>
+
+            </Box>
+            <Box></Box>
+          </Box>
+        </Box>
+      <Carousel autoplay>
+    <Box>
+      <img style={{width: '100%',height: '630px'}} src={img1} alt="" />
+    </Box>
+    <Box>
+      <img style={{width: '100%',height: '630px'}} src={photo} alt="" />
+    </Box>
+    <Box>
+      <img style={{width: '100%',height: '630px'}} src={imglar} alt="" />
+    </Box>
+  </Carousel>
       </Box>
     </Box>
   );

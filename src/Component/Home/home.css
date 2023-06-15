@@ -1,0 +1,3 @@
+.slick-active button::before {
+   display: none !important;
+}
