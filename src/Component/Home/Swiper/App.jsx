@@ -14,7 +14,7 @@ export default class AutoPlay extends Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 2000,
+      speed: 1500,
       autoplaySpeed: 3000,
       cssEase: "linear",
     };

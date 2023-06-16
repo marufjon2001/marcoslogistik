@@ -13,6 +13,14 @@ import photo from "../images/Home/photo.avif"
 import img1 from "../images/Home/img1.jpeg"
 import imglar from "../images/Home/imglar.jpg"
 import { Carousel } from 'antd';
+import RoomIcon from '@mui/icons-material/Room';
+import NearMeIcon from '@mui/icons-material/NearMe';
+import ZoomInMapIcon from '@mui/icons-material/ZoomInMap';
+import EventSeatIcon from '@mui/icons-material/EventSeat';
+import red from "../images/Home/red.png"
+import farrux from "../images/Home/farrux.png"
+import djasur from "../images/Home/djasur.png"
+import fatima from "../images/Home/fatima.png"
 import "./home.css"
 
 const Home = () => {
@@ -63,6 +71,32 @@ const Home = () => {
       active: false,
     },
   ]);
+  const [menejer, setmenejer] = useState([
+    {
+      img: farrux,
+      ism: " Фаррух Болтаев",
+      lavozim: 'Директор',
+      text: 'Про работу нашей команды',
+      malumot: 'Мы единственная компания которая предоставляет услуги на высшем уровне. Наша команда изо дня в день старается улучшать наш сервис. На сегодняшний день MarcosLogistics является лидером в это сегменте'
+
+    },
+    {
+      img: djasur,
+      ism: "Джасур Нургилджанов",
+      lavozim: 'Менеджер',
+      text: 'Про работу нашей команды',
+      malumot: 'Мы единственная компания которая предоставляет услуги на высшем уровне. Наша команда изо дня в день старается улучшать наш сервис. На сегодняшний день MarcosLogistics является лидером в это сегменте'
+
+    },
+    {
+      img: fatima,
+      ism: " Фатима Адиева",
+      lavozim: 'Бухгалтер',
+      text: 'Про работу нашей команды',
+      malumot: 'Мы единственная компания которая предоставляет услуги на высшем уровне. Наша команда изо дня в день старается улучшать наш сервис. На сегодняшний день MarcosLogistics является лидером в это сегменте'
+
+    },
+  ])
 
   let menuitem = (item) => {
     setotpravka(() => {
@@ -397,25 +431,87 @@ const Home = () => {
       </Box>
       {/*----------------------------- Carusel ------------------------------*/}
       <Box sx={{width: '100%',position: 'relative'}}>
-        <Box sx={{position: 'absolute',zIndex: '1000'}}>
-          <Box>
+        <Box sx={{position: 'absolute',zIndex: '10',display: 'flex',justifyContent: 'center',width: '100%'}}>
+          <Box display={'flex'}justifyContent={"space-between"} padding={5} alignItems={"end"}width={'90%'}>
             <Box>
-
+             <Typography variant="h5" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '40px',color: '#FCFCFD'}}>Скидка 10% </Typography>
+             <Typography variant="p" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '18px',lineHeight: '30px',color: '#FCFCFD'}}>Промокод действут с 20 сентября по 31 декабря</Typography>
             </Box>
-            <Box></Box>
+            <Box sx={{display: 'flex',justifyContent: 'center',backgroundColor: '#FCFCFD',padding: '35px 10px'}}>
+             <Box sx={{width: '90%'}}>
+               <Box sx={{display: 'flex',gap: '15px'}}>
+                <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: '#23262F',backgroundColor: '#E6E8EC',width: '200px',height: '40px'}}>Автомобил</Button>
+                <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: '#FFFFFF',backgroundColor: '#23262F',width: '200px',height: '40px'}}> Товары</Button>
+               </Box>
+               <br />
+                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}><RoomIcon style={{color: '#979C9E'}}/> Ташкент</Typography>
+                <hr/>
+                <Box sx={{display: 'flex',gap: '25px'}}>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}>Фергана  </Typography>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}>Самарканд</Typography>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}>Джизак</Typography>
+                </Box><br />
+                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}><NearMeIcon style={{color: '#979C9E'}}/> Москва</Typography>
+                <hr />
+                <Box sx={{display: 'flex',gap: '25px'}}>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}> Санкт-Петербург  </Typography>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}>Новосибирск</Typography>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}>Челябинск</Typography>
+                </Box><br />
+                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}><ZoomInMapIcon style={{color: '#979C9E'}}/> 3405 <span style={{fontSize: '11px',color: '#979C9E'}}>(кг)</span></Typography>
+                 <hr />
+                 <Box sx={{display: 'flex',gap: '25px'}}>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '15px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}><EventSeatIcon style={{color: '#979C9E'}}/> Высота <span style={{fontSize: '11px',color: '#979C9E'}}>(кг)</span></Typography>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '15px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}>Длина <span style={{fontSize: '11px',color: '#979C9E'}}>(см)</span></Typography>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '15px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}>Ширина <span style={{fontSize: '11px',color: '#979C9E'}}>(см)</span></Typography>
+                </Box><br />
+                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '50px',color: '#979C9E',display: 'flex',gap: '55px',alignItems: 'center',}}> Стоимость доставки<span style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#979C9E',display: 'flex',gap: '10px',alignItems: 'center'}}>Дата доставки</span></Typography>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '20px',lineHeight: '20px',color: '#23262F',display: 'flex',gap: '75px',alignItems: 'center'}}>12 500 000 UZS<span style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '20px',lineHeight: '20px',color: '#23262F',display: 'flex',gap: '95px',alignItems: 'center'}}>31.12.2021</span></Typography>
+                <br />
+             <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '15px',lineHeight: '24px',color: '#FFFFFF',backgroundColor: '#EA412B',width: '370px',height: '40px',padding: '20px'}}>Оформить</Button>
+             </Box>
+            </Box>
           </Box>
         </Box>
       <Carousel autoplay>
     <Box>
-      <img style={{width: '100%',height: '630px'}} src={img1} alt="" />
+      <img style={{width: '100%',height: '660px'}} src={img1} alt="" />
     </Box>
     <Box>
-      <img style={{width: '100%',height: '630px'}} src={photo} alt="" />
+      <img style={{width: '100%',height: '660px'}} src={photo} alt="" />
     </Box>
     <Box>
-      <img style={{width: '100%',height: '630px'}} src={imglar} alt="" />
+      <img style={{width: '100%',height: '660px'}} src={imglar} alt="" />
     </Box>
   </Carousel>
+      </Box>
+      
+      <Box sx={{width: '100%',height: '100%',backgroundColor: '#FCFCFD'}}>
+        {/* <img style={{width: '100%'}} src={red} alt="" /> */}
+        <Box sx={{display: 'flex',justifyContent: 'center'}}>
+          <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '38px',color: '#23262F'}}>Отзывы от компании</Typography>
+        </Box>
+        <Box sx={{display: 'flex',justifyContent: 'center'}} mt={10}>
+          <Box sx={{width: '86%',display: 'flex',gap: '22px'}}>
+           {
+            menejer.map((item,index)=>(
+              <Box sx={{width: '32%',border: ' 1px solid #E3E5E6',backgroundColor: '#FFFFFF',padding: '30px'}}>
+              <Box sx={{display: 'flex',alignItems: 'center',gap: '20px'}}>
+               <img src={item.img} alt="" />
+               <Typography style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '16px',lineHeight: '20px',color: 'black'}}> {item.ism} <br /><span style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '18px',color: '#72777A'}}>{item.lavozim}</span></Typography>
+              </Box>
+              <br />
+              <Box>
+                <Box>
+                  <Typography style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '16px',lineHeight: '20px',color: '#000000'}}>{item.text}</Typography>
+                  <Typography variant="p" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '18px',color: '#72777A'}}>{item.malumot}</Typography>
+                </Box>
+              </Box>
+            </Box>
+            ))
+           }
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
