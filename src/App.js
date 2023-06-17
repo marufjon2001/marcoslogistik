@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import React, { Component } from 'react';
 import Navbar from './Component/Navbar/Navbar';
 import Home from './Component/Home/Home';
+import Footer from './Component/Footer/Footer';
 
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
       <Box>
         <Navbar/>
         <Home/>
+        <Footer/>
       </Box>
     );
   }

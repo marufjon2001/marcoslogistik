@@ -21,6 +21,10 @@ import red from "../images/Home/red.png"
 import farrux from "../images/Home/farrux.png"
 import djasur from "../images/Home/djasur.png"
 import fatima from "../images/Home/fatima.png"
+import gps from "../images/Home/gps.png"
+import fasebok from "../images/Home/fasebok.png"
+import instagram from "../images/Home/instagram.png"
+import telegram from "../images/Home/telegram.png"
 import "./home.css"
 
 const Home = () => {
@@ -373,10 +377,10 @@ const Home = () => {
       </Box>
        {/*------------------------ collapse----------------------------- */}
       <Box sx={{ display: "flex", justifyContent: "center" }} mt={10}>
-        <Box sx={{ width: "50%"}}>
+        <Box sx={{ width: "50%",}}>
           {text.map((item, index) => (
             <Box>
-              <Accordion>
+              <Accordion style={{border: 'none',boxShadow: 'none'}}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -431,6 +435,7 @@ const Home = () => {
       </Box>
       {/*----------------------------- Carusel ------------------------------*/}
       <Box sx={{width: '100%',position: 'relative'}}>
+        
         <Box sx={{position: 'absolute',zIndex: '10',display: 'flex',justifyContent: 'center',width: '100%'}}>
           <Box display={'flex'}justifyContent={"space-between"} padding={5} alignItems={"end"}width={'90%'}>
             <Box>
@@ -486,16 +491,16 @@ const Home = () => {
   </Carousel>
       </Box>
       
-      <Box sx={{width: '100%',height: '100%',backgroundColor: '#FCFCFD'}}>
-        {/* <img style={{width: '100%'}} src={red} alt="" /> */}
-        <Box sx={{display: 'flex',justifyContent: 'center'}}>
+      <Box sx={{width: '100%',height: '100%',position: 'relative'}}>
+        <img style={{width: '100%',position: 'absolute',zIndex: '1'}} src={red} alt="" />
+        <Box sx={{display: 'flex',justifyContent: 'center'}}pt={10}>
           <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '38px',color: '#23262F'}}>Отзывы от компании</Typography>
         </Box>
         <Box sx={{display: 'flex',justifyContent: 'center'}} mt={10}>
-          <Box sx={{width: '86%',display: 'flex',gap: '22px'}}>
+          <Box sx={{width: '86%',display: 'flex',gap: '22px',zIndex: '100',flexWrap: 'wrap'}}>
            {
             menejer.map((item,index)=>(
-              <Box sx={{width: '32%',border: ' 1px solid #E3E5E6',backgroundColor: '#FFFFFF',padding: '30px'}}>
+              <Box sx={{width: '32%',border: ' 2px solid #E3E5E6',backgroundColor: '#FFFFFF',padding: '30px'}}>
               <Box sx={{display: 'flex',alignItems: 'center',gap: '20px'}}>
                <img src={item.img} alt="" />
                <Typography style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '16px',lineHeight: '20px',color: 'black'}}> {item.ism} <br /><span style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '18px',color: '#72777A'}}>{item.lavozim}</span></Typography>
@@ -511,6 +516,24 @@ const Home = () => {
             ))
            }
           </Box>
+        </Box>
+      </Box>
+      <br /><br /><br />
+      <Box sx={{display: 'flex',justifyContent: 'center'}} mt={10}>
+        <Box sx={{width: '86%',display: 'flex',alignItems: 'center',gap: '150px'}}mb={10}>
+           <Box>
+            <a href="https://www.google.com/maps/dir/Eman+Group,+5+Djami+Square,+Tashkent+100057,+O%CA%BBzbekiston/Shahriston+ko'chasi,+Tashkent,+O%60zbekiston/@41.3542885,69.2477575,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x38ae8c92267a3301:0x3cb8b146e2b3910e!2m2!1d69.2538121!2d41.3555108!1m5!1m1!1s0x38ae8cae3ab5871f:0x15743fc46216c6e1!2m2!1d69.2772063!2d41.3521537?hl=UZ&entry=ttu" target="_blank"><img src={gps} alt="" /></a>
+           </Box>
+           <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column'}}>
+            <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '86px',color: '#23262F'}}>Наши контакты</Typography>
+            <a href="" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '20px',lineHeight: '40px',color: '#182F43',textDecoration: 'none'}}>+998(77)777-46-00</a>
+            <a href="" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '20px',lineHeight: '40px',color: '#182F43',textDecoration: 'none'}}>info@marcos.uz</a>
+            <Box>
+              <a href="https://www.facebook.com/profile.php?id=100086490766152&mibextid=ZbWKwL" target="_blank"><img src={fasebok} alt=""/></a>
+              <a href="https://instagram.com/farobiyuz?igshid=MzRlODBiNWFlZA==" target="_blank"><img src={instagram} alt=""/></a>
+              <a href="https://t.me/farobiy_uz" target="_blank"><img src={telegram} alt=""/></a>
+            </Box>
+           </Box>
         </Box>
       </Box>
     </Box>
