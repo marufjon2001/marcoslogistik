@@ -5,8 +5,7 @@ const App = () => {
   const [modal1Open, setModal1Open] = useState(false);
   const [modal2Open, setModal2Open] = useState(false);
   return (
-    <>
-     
+    <>    
       <Modal
         style={{
           top: 20,
@@ -18,7 +17,7 @@ const App = () => {
       </Modal>
       <br />
       <br />
-      <Typography type="primary" onClick={() => setModal2Open(true)}>
+      <Typography onClick={() => setModal2Open(true)}>
         Vertically
       </Typography>
       <Modal
@@ -35,8 +34,14 @@ const App = () => {
         <br />
         <input type="password" placeholder='Ваше E-mail' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}} />
       <br />
-        <Button style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '16px',lineHeight: '16px',color: 'white',height: '40px',width: '69.5%',backgroundColor: '#EA412B',padding: '20px'}}>Войти</Button>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '40px',color: '#23262F'}}>Еще не зарегистрированы? <span style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#CB0E16',cursor: 'pointer'}}>Зарегистрироваться</span></Typography>
+      <input type="text" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}}  placeholder='Номер телефона' />
+      <br />
+      <input type="text" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}}  placeholder='Придумайте пароль' />
+      <br />
+      <input type="text" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}}  placeholder='Повторите пароль' />
+        <br />
+        <Button style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '16px',lineHeight: '16px',color: 'white',height: '40px',width: '60%',backgroundColor: '#EA412B'}}>Зарегистрироваться</Button>
+        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '40px',color: '#23262F'}}>Уже зарегистрированы?<span style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#CB0E16',cursor: 'pointer'}}> Войти</span></Typography>
        </Box>
       </Modal>
     </>
