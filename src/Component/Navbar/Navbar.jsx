@@ -1,4 +1,5 @@
 import { Box, Button,Fab } from '@mui/material';
+import React,{useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -6,14 +7,14 @@ import Navbar1 from './Navbar1/Navbar1';
 import navbar from "../images/Navbar/navbar.svg"
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import SearchIcon from '@mui/icons-material/Search';
-import * as React from 'react';
+// import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
-
+import { useStore } from '../store/store.js';
 
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -52,7 +53,14 @@ function BootstrapDialogTitle(props) {
 
 
 function BasicExample() {
+  
   const [open, setOpen] = React.useState(false);
+  const isFalse=useStore((state)=>state.isFalse)
+
+
+  
+  const increasePopulation = useStore((state) => state.increasePopulation)
+
 
 
   const handleClickOpen = () => {
@@ -61,6 +69,11 @@ function BasicExample() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const setModal=()=>{
+    increasePopulation(true)
+    setOpen(false)
+  }
 
   return (
     <Box>
@@ -100,7 +113,7 @@ function BasicExample() {
         <input type="password" placeholder='Введите пароль' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}} />
       <br />
         <Button  style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '16px',lineHeight: '16px',color: 'white',height: '40px',width: '69.5%',backgroundColor: '#EA412B',padding: '20px'}}>Войти</Button>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '40px',color: '#23262F'}}>Еще не зарегистрированы? <span style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#CB0E16',cursor: 'pointer'}}>Зарегистрироваться</span></Typography>
+        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '40px',color: '#23262F'}}>Еще не зарегистрированы? <span onClick={setModal} style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#CB0E16',cursor: 'pointer'}}>Зарегистрироваться</span></Typography>
        </Box>
       </BootstrapDialog>    
 {/* --------------------------------------------------------------modalka---------------------------------- */}

@@ -7,13 +7,13 @@ import Zaregistirovat from "./Component/Zaregistirovat/Zaregistirvoat"
 
 
 class App extends Component {
-  render() {
+  render() {  
     return (
       <Box>
         <Navbar/>
-        {/* <Home/> */}
-        {/* <Footer/> */}
+        <Home/>
         <Zaregistirovat/>
+        <Footer/>
       </Box>
     );
   }

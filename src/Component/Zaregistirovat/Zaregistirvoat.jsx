@@ -1,9 +1,12 @@
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
 import { Box,Typography } from '@mui/material';
+import { useStore } from '../store/store';
 const App = () => {
   const [modal1Open, setModal1Open] = useState(false);
   const [modal2Open, setModal2Open] = useState(false);
+  const isFalse=useStore(state=>state.isFalse)
+  const increasePopulation = useStore((state) => state.increasePopulation)
   return (
     <>    
       <Modal
@@ -11,20 +14,17 @@ const App = () => {
           top: 20,
         }}
         open={modal1Open}
-        onOk={() => setModal1Open(false)}
-        onCancel={() => setModal1Open(false)}
+        onOk={() => increasePopulation(false)}
+        onCancel={() => increasePopulation(false)}
       >
       </Modal>
       <br />
       <br />
-      <Typography onClick={() => setModal2Open(true)}>
-        Vertically
-      </Typography>
       <Modal
         centered
-        open={modal2Open}
-        onOk={() => setModal2Open(false)}
-        onCancel={() => setModal2Open(false)}
+        open={isFalse}
+        onOk={() => increasePopulation(false)}
+        onCancel={() => increasePopulation(false)}
       >
         <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',padding: '35px 35px'}}>
         <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '30px',color: '#23262F'}}>Зарегистрироватся</Typography>
