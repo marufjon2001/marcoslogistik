@@ -1,8 +1,34 @@
 import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
 import Posilku1 from "../../images/Posilku/Posilku.svg"
+import { useState } from 'react';
 
 const Posilku = () => {
+    const [text, setext] = useState([
+        {
+          numer: "01",
+          text:"Автомобил",
+          activee: true,
+        },
+        {
+          numer: "02",
+          text:" Товары",
+          activee: false,
+        },
+       
+      ]);
+    let menuitem = (item) => {
+        setext(() => {
+          return text.map((sonItem) => {
+            if (sonItem.numer === item.numer) {
+              sonItem.activee = true;
+            } else {
+              sonItem.activee = false;
+            }
+            return sonItem;
+          });
+        });
+      };
     return (
         <Box>
             <img style={{width: '100%'}} src={Posilku1} alt="" />
@@ -11,8 +37,11 @@ const Posilku = () => {
                     <Typography variant='p' style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '32px',color: '#23262F'}}>Тип посылки</Typography>
                     <br /><br />
                     <Box sx={{display: 'flex',gap: '20px'}}>
-                        <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'white',padding: '12px, 16px, 12px, 16px',backgroundColor: '#23262F',height: '40px',width: '200px'}}>Автомобил</Button>
-                        <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'black',padding: '12px, 16px, 12px, 16px',height: '40px',width: '200px',border: '2px solid #E6E8EC'}}> Товары</Button>
+                        {
+                            text.map((item)=>(
+                                <Button onClick={() => menuitem(item)} style={item.activee ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'white',padding: '12px, 16px, 12px, 16px',backgroundColor: '#23262F',height: '40px',width: '200px'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'black',padding: '12px, 16px, 12px, 16px',backgroundColor: 'white',height: '40px',width: '200px',border: '2px solid #E6E8EC'}}>{item.text}</Button>
+                            ))
+                        }
                     </Box>
                     <br></br><br />
                     <Box>
