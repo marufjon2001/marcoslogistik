@@ -16,7 +16,7 @@ class App extends Component {
         {/* <Home/> */}
         <Menu/>
         <Zaregistirovat/>
-        <Footer/>/
+        <Footer/>
       </Box>
     );
   }
