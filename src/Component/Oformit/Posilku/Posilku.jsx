@@ -3,9 +3,17 @@ import medal from "../../images/Posilku/medal.svg"
 import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
 import { useState } from 'react';
+import { Select } from 'antd';
+const options = [];
+
+const handleChange = (value) => {
+  console.log(`selected ${value}`);
+};
 
 const Posilku = () => {
     const [text, setext] = useState([
+
+
         {
           numer: "01",
           text:"Автомобил",
@@ -18,6 +26,10 @@ const Posilku = () => {
         },
        
       ]);
+      const [active,setactive] = useState(false)
+      const [active2,setactive2] = useState(false)
+      
+      
     let menuitem = (item) => {
         setext(() => {
           return text.map((sonItem) => {
@@ -46,16 +58,192 @@ const Posilku = () => {
                         }
                     </Box>
                     <br></br><br />
-                    <Box sx={{position: 'relative'}}>
+                      <Box sx={{position: 'relative'}}>
                     <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '32px',color: '#23262F'}}>Вес и габариты</Typography><br />
                     <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '50px',color: '#979C9E'}}>Вес(кг)</Typography>
                     <img style={{position: "absolute",padding: '8px 5px'}} src={medal} alt="" />
                     <input  style={{width: '350px',height: '40px',paddingLeft: '30px',border: '2.5px solid #E3E5E5'}}/>
                     <br /><br />
-                    <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#979C9E'}}>Заполните данные о посылке</Typography>
-                    <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '32px',color: '#979C9E'}}>Заполните данные </Typography>
-                    <br /><br />
+                    <Typography style={active ? {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: "black",cursor: 'pointer'}: {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#979C9E',cursor: 'pointer'}} onClick={()=>setactive(true)}>Заполните данные о посылке</Typography>
+                    <Typography style={active2 ? {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: "black",cursor: 'pointer'}: {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#979C9E',cursor: 'pointer'}} onClick={()=>setactive2(true)}>Заполните данные </Typography>
+                    <br />
+                    <Box>
+                {/* ------------------    Заполните данные------------------------------  */}
+                       {
+                        active2 ? <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}}>
+                        <Box sx={{width: '50%'}}>
+                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Телефон отправителя</Typography>
+                         <input type="number"  placeholder="Номер телефона" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Имя получателя</Typography>
+                         <input  placeholder="Введите имя отправителя" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Комментарии и пожелания</Typography>
+                        </Box>
+                        <Box sx={{width: '50%'}}>
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Адрес получателя</Typography>
+                          <input type="number" placeholder="Номер телефона" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Телефон получателя</Typography>
+                         <input type="number" placeholder="Номер телефона" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        </Box>
+                       </Box>
+                       : ""
+                       }
                     </Box>
+            {/* --------------------------- Заполните данные о посылке--------------- */}
+                    {
+                      active ? 
+                    <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}}>
+                        <Box sx={{width: '50%'}}>
+                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Город отправителя</Typography>
+                         <Select
+                         placeholder='Ташкент'
+                          mode="tags"
+                          style={{
+                            width: '85%',
+                            height: '40px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                           
+                          }}
+                          onChange={handleChange}
+                          tokenSeparators={[',']}
+                          options={options}
+                        />
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Адрес отправителя</Typography>
+                         <input  placeholder="Алишер Навои 12" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Почтовый индекс отправителя</Typography>
+                         <input  placeholder="100011" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Выберите дату отправки</Typography>
+                        <input type="datetime-local" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        </Box>
+                        <Box sx={{width: '50%'}}>
+                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Город получателя</Typography>
+                         <Select
+                         placeholder='Москва'
+                          mode="tags"
+                          style={{
+                            width: '85%',
+                            height: '40px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                           
+                          }}
+                          onChange={handleChange}
+                          tokenSeparators={[',']}
+                          options={options}
+                        />
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Адрес получателя</Typography>
+                         <input  placeholder="Тверская ел 12" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Почтовый индекс получателя</Typography>
+                         <input  placeholder="125009" style={{
+                            width: '85%',
+                            height: '30px',
+                            fontFamily: 'Inter',
+                            fontWeight: '500',
+                            fontSize: '16px',
+                            lineHeight: '16px',
+                            borderRadius: "4px",
+                            borderColor: '#E3E5E5',
+                            paddingLeft: '10px'
+                           
+                          }}/>
+                        </Box>
+                       </Box>
+
+                      :""
+                    }
+                      </Box>
                 </Box>
             </Box>
         </Box>
