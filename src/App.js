@@ -6,6 +6,8 @@ import Footer from './Component/Footer/Footer';
 import Zaregistirovat from "./Component/Zaregistirovat/Zaregistirvoat"
 import Navbarwhite from "./Component/Navbar/Navbarwhite/Navbarwhite"
 import Menu from './Component/Oformit/Menu/Menu';
+import { Route,Routes } from 'react-router-dom';
+
 
 
 class App extends Component {
