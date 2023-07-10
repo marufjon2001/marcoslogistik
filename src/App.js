@@ -5,21 +5,26 @@ import Home from './Component/Home/Home';
 import Footer from './Component/Footer/Footer';
 import Zaregistirovat from "./Component/Zaregistirovat/Zaregistirvoat"
 // import Navbarwhite from "./Component/Navbar/Navbarwhite/Navbarwhite"
-// import Menu from './Component/Oformit/Menu/Menu';
+import Menu from './Component/Oformit/Menu/Menu';
+import Posilku from "./Component/Oformit/Posilku/Posilku"
 import { Route,Routes } from 'react-router-dom';
+import Tovar from "./Component/Oformit/Posilku/Tovar/Tovar"
+import Oplata from "./Component/Oplata/Oplata"
 
 
 
 class App extends Component {
-  render() {  
+  render() { 
     return (
       <Box>
         <Routes>
           <Route path='/' element={<Home/>}/>
-        <Navbar/>
+          <Route path='/menu' element={<Menu/>}/>
+          <Route path='/menu/posilku' element={<Posilku/>}/>
+          <Route path='/menu/Tovar' element={<Tovar/>}/>
+          <Route path='/menu/Oplata' element={<Oplata/>}/>
         </Routes>
         <Zaregistirovat/>
-        {/* <Menu/> */}
         <Footer/>
       </Box>
     );

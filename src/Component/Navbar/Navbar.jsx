@@ -14,6 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import { useStore } from '../store/store.js';
+import { Link } from 'react-router-dom';
 
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -80,7 +81,9 @@ function BasicExample() {
      <Box sx={{backgroundColor: '#23262F'}} width={'100%'} display={'flex'} justifyContent={"center"}>
     <Navbar style={{backgroundColor: '#23262F',width: '100%'}} expand="lg">
       <Container className='navbar'>
+        <Link to={"/"}>
         <img style={{height: '40px'}} src={navbar} alt="" />
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav style={{position: 'relative'}} className="me-auto">
@@ -90,8 +93,8 @@ function BasicExample() {
            </Box>
           </Nav>
           <Box sx={{display: 'flex',gap: '22px'}}>
-      <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#23262F',width: '138px',backgroundColor: '#FCFCFD',padding: '13px',height: '40px'}}>Оформить заявку</Button>
-      <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#FCFCFD',width: '138px',backgroundColor: '#23262F',padding: '13px',border: '1px solid #FCFCFD',height: '40px'}}>Калькулятор цен</Button>
+      <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#23262F',width: '138px',backgroundColor: '#FCFCFD',padding: '13px',height: '40px'}}> <Link style={{textDecoration: 'none',color: '#23262F'}} to={'menu'}> Оформить заявку</Link></Button>
+     <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#FCFCFD',width: '138px',backgroundColor: '#23262F',padding: '13px',border: '1px solid #FCFCFD',height: '40px',textDecoration: 'none'}}>Калькулятор цен</Button>
 {/* ---------------------------modalka----------------------------------------------- */}
       <Fab onClick={handleClickOpen} style={{backgroundColor: '#F2F4F5',flex: 'none',order: '0',flexGrow: '0',width: '40px',height: '40px',boxShadow: 'none'}} color="primary" aria-label="add">
       <Person2OutlinedIcon style={{color: '#23262F'}}/>
@@ -105,8 +108,8 @@ function BasicExample() {
         </BootstrapDialogTitle>
        <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',padding: '35px 25px'}}>
         <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '30px',color: '#23262F'}}>Вход в кабинет </Typography>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '30px',color: '#72777A'}}>Введите логин и пароль для входа </Typography>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '30px',color: '#72777A'}}> в личный кабинет</Typography>
+        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '22px',color: '#72777A',textAlign: 'center'}}>Введите логин и пароль для входа <br /> в личный кабинет</Typography>
+        <br />
         <input type="email" placeholder='Введите E-mail' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}} />
         <br />
         <input type="password" placeholder='Введите пароль' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}} />

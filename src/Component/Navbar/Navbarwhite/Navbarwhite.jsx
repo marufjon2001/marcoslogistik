@@ -14,6 +14,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import { useStore } from "../../store/store"
 import Navbarwhite1 from "../../Navbar/Navbarwhite/Navbarwhite1"
+import { Link } from 'react-router-dom';
 
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -80,7 +81,9 @@ function BasicExample() {
      <Box sx={{backgroundColor: '#FFFFFF',zIndex: '1000'}} width={'100%'} display={'flex'} justifyContent={"center"}>
     <Navbar style={{backgroundColor: '#FFFFFF',width: '100%'}} expand="lg">
       <Container className='navbar'>
+        <Link to={"/"}>
         <img style={{height: '40px'}} src={Navbarwhite} alt="" />
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav style={{position: 'relative'}} className="me-auto">

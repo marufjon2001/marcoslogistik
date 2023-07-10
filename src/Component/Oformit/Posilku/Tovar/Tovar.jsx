@@ -5,7 +5,9 @@ import React from 'react';
 import { useState } from 'react';
 import { Select } from 'antd';
 import { Input } from 'antd';
+import Navbarwhite from "../../../Navbar/Navbarwhite/Navbarwhite"
 import shirina from "../../../images/Posilku/shirina.svg"
+import { Link } from "react-router-dom";
 const { TextArea } = Input;
 const onChange = (e) => {
   console.log(e);
@@ -25,11 +27,13 @@ const Posilku = () => {
           numer: "01",
           text:"Автомобил",
           activee: true,
+          to: '/menu/posilku'
         },
         {
           numer: "02",
           text:" Товары",
           activee: false,
+          to: '/menu/Tovar'
         },
        
       ]);
@@ -50,6 +54,7 @@ const Posilku = () => {
       };
     return (
         <Box>
+          <Navbarwhite/>
             <img style={{width: '100%'}} src={Posilku1} alt="" />
             <Box sx={{display: 'flex',justifyContent: 'center'}} mt={5}>
                 <Box sx={{width: '85%'}}>
@@ -58,8 +63,10 @@ const Posilku = () => {
                     <Box sx={{display: 'flex',gap: '20px'}}>
                         {
                             text.map((item)=>(
-                                <Button onClick={() => menuitem(item)} style={item.activee ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'white',padding: '12px, 16px, 12px, 16px',backgroundColor: '#23262F',height: '40px',width: '200px'}:
-                                {fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'black',padding: '12px, 16px, 12px, 16px',backgroundColor: 'white',height: '40px',width: '200px',border: '2px solid #E6E8EC'}}>{item.text}</Button>
+                              <Link to={item.to}>
+                              <Button onClick={() => menuitem(item)} style={item.activee ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'black',padding: '12px, 16px, 12px, 16px',backgroundColor: 'white',height: '40px',width: '200px',border: '2px solid #E6E8EC'}:
+                              {fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'white',padding: '12px, 16px, 12px, 16px',backgroundColor: '#23262F',height: '40px',width: '200px'}}>{item.text}</Button>
+                              </Link>
                             ))
                         }
                     </Box>
@@ -103,8 +110,7 @@ const Posilku = () => {
                             </Box>
                         </Box>
                     <Typography style={active ? {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: "black",cursor: 'pointer'}: {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#979C9E',cursor: 'pointer'}} onClick={()=>setactive(true)}>Заполните данные о посылке</Typography>
-                    <Typography style={active2 ? {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: "black",cursor: 'pointer'}: {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#979C9E',cursor: 'pointer'}} onClick={()=>setactive2(true)}>Заполните данные </Typography>
-                    <br />
+                  
                     <Box>
                 {/* ------------------    Заполните данные------------------------------  */}
                        {
@@ -171,6 +177,8 @@ const Posilku = () => {
                        }
                     </Box>
             {/* --------------------------- Заполните данные о посылке--------------- */}
+            <Typography style={active2 ? {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: "black",cursor: 'pointer'}: {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#979C9E',cursor: 'pointer'}} onClick={()=>setactive2(true)}>Заполните данные </Typography>
+                    <br />
                     {
                       active ? 
                     <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}} mt={6}>
@@ -295,8 +303,8 @@ const Posilku = () => {
                   <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#23262F'}}>К оплате: 25 390 000 UZS</Typography>
                   <br />
                   <Box sx={{display: 'flex',gap: '20px'}}>
-                  <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'black',padding: '12px, 16px, 12px, 16px',backgroundColor: 'white',height: '40px',width: '200px',border: '2px solid #E3E5E5',}}>Отмена</Button>
-                  <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'white',padding: '12px, 16px, 12px, 16px',backgroundColor: '#CB0E16',height: '40px',width: '200px',border: '2px solid #E3E5E5',}}>Перейти к оплате</Button>
+                  <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'black',padding: '12px, 16px, 12px, 16px',backgroundColor: 'white',height: '40px',width: '200px',border: '2px solid #E3E5E5',}}><Link style={{textDecoration: 'none',color: '#23262F'}} to={'/'}> Отмена</Link></Button>
+                  <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'white',padding: '12px, 16px, 12px, 16px',backgroundColor: '#CB0E16',height: '40px',width: '200px',border: '2px solid #E3E5E5',}}> <Link to={'/menu/Oplata'} style={{textDecoration: 'none',color: 'white'}}> Перейти к оплате</Link> </Button>
                   </Box>
                   </Box>
                   :""

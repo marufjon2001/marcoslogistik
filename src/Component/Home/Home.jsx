@@ -26,6 +26,8 @@ import fasebok from "../images/Home/fasebok.png"
 import instagram from "../images/Home/instagram.png"
 import telegram from "../images/Home/telegram.png"
 import "./home.css"
+import Navbar from "../Navbar/Navbar"
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [text, setext] = useState([
@@ -128,6 +130,8 @@ const Home = () => {
   };
 
   return (
+    <Box>
+     <Navbar/>
     <Box sx={{ backgroundColor: "#FFFFFF" }}>
       {/* tanck img */}
       <Box width={"100%"} height={"100%"} position={"relative"}>
@@ -473,7 +477,7 @@ const Home = () => {
                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '50px',color: '#979C9E',display: 'flex',gap: '55px',alignItems: 'center',}}> Стоимость доставки<span style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#979C9E',display: 'flex',gap: '10px',alignItems: 'center'}}>Дата доставки</span></Typography>
                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '20px',lineHeight: '20px',color: '#23262F',display: 'flex',gap: '75px',alignItems: 'center'}}>12 500 000 UZS<span style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '20px',lineHeight: '20px',color: '#23262F',display: 'flex',gap: '95px',alignItems: 'center'}}>31.12.2021</span></Typography>
                 <br />
-             <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '15px',lineHeight: '24px',color: '#FFFFFF',backgroundColor: '#EA412B',width: '370px',height: '40px',padding: '20px'}}>Оформить</Button>
+             <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '15px',lineHeight: '24px',color: '#FFFFFF',backgroundColor: '#EA412B',width: '370px',height: '40px',padding: '20px'}}><Link style={{textDecoration: 'none',color: 'white'}} to={'/menu/posilku'}> Оформить</Link></Button>
              </Box>
             </Box>
           </Box>
@@ -536,6 +540,7 @@ const Home = () => {
            </Box>
         </Box>
       </Box>
+    </Box>
     </Box>
   );
 };
