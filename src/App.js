@@ -4,8 +4,8 @@ import Navbar from './Component/Navbar/Navbar';
 import Home from './Component/Home/Home';
 import Footer from './Component/Footer/Footer';
 import Zaregistirovat from "./Component/Zaregistirovat/Zaregistirvoat"
-import Navbarwhite from "./Component/Navbar/Navbarwhite/Navbarwhite"
-import Menu from './Component/Oformit/Menu/Menu';
+// import Navbarwhite from "./Component/Navbar/Navbarwhite/Navbarwhite"
+// import Menu from './Component/Oformit/Menu/Menu';
 import { Route,Routes } from 'react-router-dom';
 
 
@@ -14,10 +14,12 @@ class App extends Component {
   render() {  
     return (
       <Box>
-        {/* <Navbar/> */}
-        {/* <Home/> */}
-        <Menu/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+        <Navbar/>
+        </Routes>
         <Zaregistirovat/>
+        {/* <Menu/> */}
         <Footer/>
       </Box>
     );

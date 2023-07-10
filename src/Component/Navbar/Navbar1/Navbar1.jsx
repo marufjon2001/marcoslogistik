@@ -9,13 +9,13 @@ const Navbar1 = () => {
       <Box width={'100%'} display={'flex'} justifyContent={'center'} sx={{padding: '10px'}}>
       <Box width={'87%'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
         <Box sx={{display: 'flex',gap: '30px'}}>
-          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '16px',color: '#FFFFFF',flex: 'none',order: '0',flexGrow: '0'}}>
+          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '16px',color: '#FFFFFF',flex: 'none',order: '0',flexGrow: '0',cursor: 'pointer'}}>
           О компании
           </Typography>
-          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '16px',color: '#FFFFFF',flex: 'none',order: '0',flexGrow: '0'}}>
+          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '16px',color: '#FFFFFF',flex: 'none',order: '0',flexGrow: '0',cursor: 'pointer'}}>
           Частые вопросы
           </Typography>
-          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '16px',color: '#FFFFFF',flex: 'none',order: '0',flexGrow: '0'}}>
+          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '16px',color: '#FFFFFF',flex: 'none',order: '0',flexGrow: '0',cursor: 'pointer'}}>
           Сотрудничество
           </Typography>
         </Box>

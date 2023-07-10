@@ -36,7 +36,6 @@ const Posilku = () => {
       const [active,setactive] = useState(false)
       const [active2,setactive2] = useState(false)
       
-      
     let menuitem = (item) => {
         setext(() => {
           return text.map((sonItem) => {
@@ -66,13 +65,13 @@ const Posilku = () => {
                     </Box>
                     <br></br><br />
                        <Box>
-                        <Box sx={{width: '45%',border: '1px solid #DEE2E6',backgroundColor: '#FFE5E5',padding: '35px 20px'}}>
+                        <Box sx={{width: '42%',border: '1px solid #DEE2E6',backgroundColor: '#FFE5E5',padding: '22px 20px'}}>
                             <Box>
                                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '18px',lineHeight: '18px'}}>Список запрещенных предметов</Typography>
-                                <ul>
-                                    <li>Наркотические средства</li>
+                                <ul style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '25px',color: '#23262F'}}>
+                                    <li >Наркотические средства</li >
                                     <li>Психотропные вещества и прекурсоры</li>
-                                    <li>Ядерные материалы, радиоактивные и другие опасные вещества</li>
+                                    <li>Ядерные материалы, радиоактивные и другие опасные вещества</li >
                                     <li>Яды, ядовитые животные, вещества, растения и семена.</li>
                                 </ul>
                             </Box>
