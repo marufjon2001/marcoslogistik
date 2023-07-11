@@ -94,7 +94,7 @@ function BasicExample() {
           </Nav>
           <Box sx={{display: 'flex',gap: '22px'}}>
       <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#23262F',width: '138px',backgroundColor: '#FCFCFD',padding: '13px',height: '40px'}}> <Link style={{textDecoration: 'none',color: '#23262F'}} to={'menu'}> Оформить заявку</Link></Button>
-     <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#FCFCFD',width: '138px',backgroundColor: '#23262F',padding: '13px',border: '1px solid #FCFCFD',height: '40px',textDecoration: 'none'}}>Калькулятор цен</Button>
+     <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#FCFCFD',width: '138px',backgroundColor: '#23262F',padding: '13px',border: '1px solid #FCFCFD',height: '40px',textDecoration: 'none'}}> <a style={{textDecoration: 'none',color: 'white'}} href="#carusel"> Калькулятор цен</a></Button>
 {/* ---------------------------modalka----------------------------------------------- */}
       <Fab onClick={handleClickOpen} style={{backgroundColor: '#F2F4F5',flex: 'none',order: '0',flexGrow: '0',width: '40px',height: '40px',boxShadow: 'none'}} color="primary" aria-label="add">
       <Person2OutlinedIcon style={{color: '#23262F'}}/>

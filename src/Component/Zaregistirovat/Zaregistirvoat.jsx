@@ -25,9 +25,9 @@ const App = () => {
         onCancel={() => increasePopulation(false)}
       >
         <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',padding: '30px 30px'}}>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '30px',color: '#23262F'}}>Зарегистрироватся</Typography>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '30px',color: '#72777A'}}>Заполните данные необходимые для </Typography>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '30px',color: '#72777A'}}> регистрации</Typography>
+        <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '32px',color: '#23262F'}}>Зарегистрироватся</Typography>
+        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '20px',color: '#72777A',textAlign: 'center'}}>Заполните данные необходимые для <br /> регистрации</Typography>
+        <br />
         <input type="email" placeholder='Ваше ФИО' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}} />
         <br />
         <input type="password" placeholder='Ваше E-mail' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}} />

@@ -11,6 +11,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import zayafka from "../images/Zayafka/zayafka.png"
 import { Link } from 'react-router-dom';
+import Navbarwhite from "../Navbar/Navbarwhite/Navbarwhite"
 
 const style = {
   position: 'absolute',
@@ -51,6 +52,7 @@ const Oplata = () => {
 
     return (
         <Box>
+            <Navbarwhite/>
             <img style={{width: '100%'}} src={oplata} alt="" />
             <Box sx={{display: 'flex',justifyContent: 'center'}}>
             <Box sx={{width: '84%'}} mt={5}>

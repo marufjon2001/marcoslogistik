@@ -440,7 +440,7 @@ const Home = () => {
       {/*----------------------------- Carusel ------------------------------*/}
       <Box sx={{width: '100%',position: 'relative'}}>
         
-        <Box sx={{position: 'absolute',zIndex: '10',display: 'flex',justifyContent: 'center',width: '100%'}}>
+        <Box id={'carusel'} sx={{position: 'absolute',zIndex: '10',display: 'flex',justifyContent: 'center',width: '100%'}}>
           <Box display={'flex'}justifyContent={"space-between"} padding={5} alignItems={"end"}width={'90%'}>
             <Box>
              <Typography variant="h5" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '40px',color: '#FCFCFD'}}>Скидка 10% </Typography>
