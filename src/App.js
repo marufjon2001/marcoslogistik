@@ -10,6 +10,7 @@ import Posilku from "./Component/Oformit/Posilku/Posilku"
 import { Route,Routes } from 'react-router-dom';
 import Tovar from "./Component/Oformit/Posilku/Tovar/Tovar"
 import Oplata from "./Component/Oplata/Oplata"
+import Lichniy from './Component/Lichniy/Lichniy';
 
 
 
@@ -17,7 +18,7 @@ class App extends Component {
   render() { 
     return (
       <Box>
-        <Routes>
+        {/* <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/menu' element={<Menu/>}/>
           <Route path='/menu/posilku' element={<Posilku/>}/>
@@ -25,7 +26,8 @@ class App extends Component {
           <Route path='/menu/Oplata' element={<Oplata/>}/>
         </Routes>
         <Zaregistirovat/>
-        <Footer/>
+        <Footer/> */}
+        <Lichniy/>
       </Box>
     );
   }
