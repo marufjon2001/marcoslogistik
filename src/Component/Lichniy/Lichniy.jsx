@@ -5,6 +5,7 @@ import Person2SharpIcon from '@mui/icons-material/Person2Sharp';
 import ManageHistorySharpIcon from '@mui/icons-material/ManageHistorySharp';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import lichniy from "../images/Lichniy/lichniy.png"
+import Draver from "../Lichniy/Draver/Draver"
 const Lichniy = () => {
     const[text,settext] = useState(false)
     const[text1,settext1] = useState(false)
@@ -76,7 +77,7 @@ const Lichniy = () => {
                             </Box>
                         </Box>
                     <hr style={{border: '0.2px solid black',width: '98%'}}/>
-                    gfug
+                    <Draver/>
                     </Box>
                     :""
                 }

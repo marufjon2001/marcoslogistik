@@ -11,6 +11,7 @@ import { Route,Routes } from 'react-router-dom';
 import Tovar from "./Component/Oformit/Posilku/Tovar/Tovar"
 import Oplata from "./Component/Oplata/Oplata"
 import Lichniy from './Component/Lichniy/Lichniy';
+import Draver from "./Component/Lichniy/Draver/Draver"
 
 
 
