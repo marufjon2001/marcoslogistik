@@ -48,9 +48,9 @@ const Lichniy = () => {
                     </Box>
                 }
                 {
-                    text ?<Box sx={{width: '75%',position: 'relative'}}>
+                    text ?<Box sx={{width: '80%',position: 'relative'}}>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '70px',color: '#23262F'}}>История отправлений</Typography>
-                        <Box sx={{display: 'flex',gap: '13px',flexWrap: 'wrap'}}>
+                        <Box sx={{display: 'flex',gap: '10px',flexWrap: 'wrap'}}>
                             <Box>
                             <Button style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '14px',lineHeight: '16px',color: '#EA412B',backgroundColor: '#FFF0F1',height: '40px',border: '2px solid #FFF0F1'}}>Новые (3)</Button><br /><br />
                              <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '12px',lineHeight: '16px',color: '#72777A',display: 'flex',gap: '10px'}}>Номер заказа <img src={lichniy} alt="" /></Typography>

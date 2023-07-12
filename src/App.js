@@ -12,6 +12,7 @@ import Tovar from "./Component/Oformit/Posilku/Tovar/Tovar"
 import Oplata from "./Component/Oplata/Oplata"
 import Lichniy from './Component/Lichniy/Lichniy';
 import Draver from "./Component/Lichniy/Draver/Draver"
+import Otslejevaniy from './Component/Otslejevaniy/Otslejevaniy';
 
 
 
@@ -25,10 +26,11 @@ class App extends Component {
           <Route path='/menu/posilku' element={<Posilku/>}/>
           <Route path='/menu/Tovar' element={<Tovar/>}/>
           <Route path='/menu/Oplata' element={<Oplata/>}/>
-        </Routes>
+        </Routes> */}
+        {/* <Lichniy/> */}
+        <Otslejevaniy/>
         <Zaregistirovat/>
-        <Footer/> */}
-        <Lichniy/>
+        <Footer/>
       </Box>
     );
   }
