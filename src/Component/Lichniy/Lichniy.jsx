@@ -23,7 +23,7 @@ const Lichniy = () => {
                 <Box sx={{width: '17%',display: 'flex',justifyContent: "end"}} >
                     <Box width={'60%'}>
                     <Typography onClick={menuitem} style={text ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><Person2SharpIcon/>Профиль</Typography>
-                    <Typography onClick={menuitem} style={text1 ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{color: '#72777A',cursor: 'pointer'}}><ManageHistorySharpIcon/>История <br /> отправлений</Typography>
+                    <Typography onClick={menuitem} style={text1 ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ManageHistorySharpIcon/>История <br /> отправлений</Typography>
                     <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#EA412B',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ExitToAppIcon/>Выйти</Typography>
                     </Box>
                 </Box>
@@ -44,13 +44,13 @@ const Lichniy = () => {
                         <input type='number' style={{width: '100%',height: '40px',border: '2px solid #E3E5E5',fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: 'black'}}/>
                     </Box>
                     <hr style={{border: '1px solid black',width: '98%'}}/>
-                    <Button style={{fontWeight: '700',fontSize: '15px',lineHeight: '16px',color: 'white',backgroundColor: '#EA412B',height: '40px',width: '21%',padding: '20px'}}>Обновить данные</Button>
+                    <Button style={{fontWeight: '700',fontSize: '15px',lineHeight: '16px',color: 'white',backgroundColor: '#EA412B',height: '40px',width: '19%',padding: '10px'}}>Обновить данные</Button>
                     </Box>
                 }
                 {
                     text ?<Box sx={{width: '75%',position: 'relative'}}>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '70px',color: '#23262F'}}>История отправлений</Typography>
-                        <Box sx={{display: 'flex',gap: '12px',flexWrap: 'wrap'}}>
+                        <Box sx={{display: 'flex',gap: '13px',flexWrap: 'wrap'}}>
                             <Box>
                             <Button style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '14px',lineHeight: '16px',color: '#EA412B',backgroundColor: '#FFF0F1',height: '40px',border: '2px solid #FFF0F1'}}>Новые (3)</Button><br /><br />
                              <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '12px',lineHeight: '16px',color: '#72777A',display: 'flex',gap: '10px'}}>Номер заказа <img src={lichniy} alt="" /></Typography>
