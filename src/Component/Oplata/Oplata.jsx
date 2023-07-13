@@ -94,7 +94,9 @@ const Oplata = () => {
              <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '32px',color: '#23262F'}}>Заявка отправлена</Typography>
              <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '18px',lineHeight: '25px',color: '#23262F', textAlign:"center" }}>Вы можете оплатить ваш заказ в любое удобное время <br /> в разделе “Личный кабинет”
              </Typography>
+             <Link to={'/menu/Личный кабинет'}>
              <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '20px',color: 'white',height: '40px',backgroundColor: '#CB0E16'}}>Посмотреть статус</Button>
+             </Link>
              <Button onClick={()=>handleClose(true)} style={{width: '16.5%', fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '20px',color: 'black',height: '40px',backgroundColor: 'white',border: '2px solid #E6E8EC',}}> Отмена</Button>
            </Box>
           </Box>

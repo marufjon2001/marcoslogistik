@@ -20,16 +20,16 @@ class App extends Component {
   render() { 
     return (
       <Box>
-        {/* <Routes>
+        <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/menu' element={<Menu/>}/>
           <Route path='/menu/posilku' element={<Posilku/>}/>
           <Route path='/menu/Tovar' element={<Tovar/>}/>
           <Route path='/menu/Oplata' element={<Oplata/>}/>
-        </Routes> */}
-        {/* <Lichniy/> */}
-        <Otslejevaniy/>
-        {/* <Zaregistirovat/> */}
+          <Route path='/menu/Личный кабинет' element={  <Lichniy/>}/>
+          <Route path='/menu/Треккинг' element={  <Otslejevaniy/>}/>
+        </Routes>    
+        <Zaregistirovat/>
         <Footer/>
       </Box>
     );

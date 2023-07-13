@@ -5,8 +5,7 @@ import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import Radio from '@mui/material/Radio';
 
-const Otslejevaniy = () => {
-    
+const Otslejevaniy = () => {    
     return (
         <Box sx={{backgroundColor: '#FCFCFD',width: '100%',height: '100%'}}>
             <Navbarwhite/>

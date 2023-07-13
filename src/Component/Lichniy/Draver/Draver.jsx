@@ -5,6 +5,7 @@ import { Button, Typography } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import map from "../../images/Lichniy/map.png"
 import Radio from '@mui/material/Radio';
+import { Link } from 'react-router-dom';
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export default function SwipeableTemporaryDrawer() {
@@ -108,7 +109,9 @@ export default function SwipeableTemporaryDrawer() {
                <Box sx={{display: 'flex',justifyContent: 'center',flexDirection: 'column',alignItems: 'center'}}>
                <Typography style={{display: 'flex',alignItems: 'center',gap: '15px'}}><Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '22px',color: '#777E90',justifyContent: 'center'}}>Примерная дата доставки: 31:12:2021</Typography></Typography><br />
                <img src={map} alt="" /><br />
+               <Link style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '14px',color: '#23262F',height: '40px',border: '1px solid #CDD3D9'}} to={'/menu/Треккинг'}>
                <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '14px',color: '#23262F',height: '40px',border: '2px solid #CDD3D9'}}>Отменить заказ</Button>
+               </Link>
                </Box>
               </Box>
             </Box>

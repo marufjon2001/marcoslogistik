@@ -6,6 +6,7 @@ import ManageHistorySharpIcon from '@mui/icons-material/ManageHistorySharp';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import lichniy from "../images/Lichniy/lichniy.png"
 import Draver from "../Lichniy/Draver/Draver"
+import { Link } from 'react-router-dom';
 const Lichniy = () => {
     const[text,settext] = useState(false)
     const[text1,settext1] = useState(false)
@@ -24,7 +25,9 @@ const Lichniy = () => {
                     <Box width={'60%'}>
                     <Typography onClick={menuitem} style={text ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><Person2SharpIcon/>Профиль</Typography>
                     <Typography onClick={menuitem} style={text1 ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ManageHistorySharpIcon/>История <br /> отправлений</Typography>
+                    <Link style={{textDecoration: 'none'}} to={'/menu/Oplata'}>
                     <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#EA412B',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ExitToAppIcon/>Выйти</Typography>
+                    </Link>
                     </Box>
                 </Box>
                 {
@@ -44,7 +47,10 @@ const Lichniy = () => {
                         <input type='number' style={{width: '100%',height: '40px',border: '2px solid #E3E5E5',fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: 'black'}}/>
                     </Box>
                     <hr style={{border: '1px solid black',width: '98%'}}/>
+                    <Link style={{width: '100%'}} to={'/menu/Треккинг'}>
                     <Button style={{fontWeight: '700',fontSize: '15px',lineHeight: '16px',color: 'white',backgroundColor: '#EA412B',height: '40px',width: '19%',padding: '10px'}}>Обновить данные</Button>
+                    </Link>
+                    <br></br><br />
                     </Box>
                 }
                 {
@@ -78,6 +84,7 @@ const Lichniy = () => {
                         </Box>
                     <hr style={{border: '0.2px solid black',width: '98%'}}/>
                     <Draver/>
+                    <br /><br /><br />
                     </Box>
                     :""
                 }
