@@ -29,7 +29,7 @@ class App extends Component {
         </Routes> */}
         {/* <Lichniy/> */}
         <Otslejevaniy/>
-        <Zaregistirovat/>
+        {/* <Zaregistirovat/> */}
         <Footer/>
       </Box>
     );
