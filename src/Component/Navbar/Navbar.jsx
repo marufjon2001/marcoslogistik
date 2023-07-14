@@ -78,7 +78,7 @@ function BasicExample() {
   return (
     <Box>
      <Navbar1/>
-     <Box sx={{backgroundColor: '#23262F'}} width={'100%'} display={'flex'} justifyContent={"center"}>
+     <Box width={'100%'} display={'flex'} justifyContent={"center"}>
     <Navbar style={{backgroundColor: '#23262F',width: '100%'}} expand="lg">
       <Container className='navbar'>
         <Link to={"/"}>
@@ -88,7 +88,7 @@ function BasicExample() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav style={{position: 'relative'}} className="me-auto">
            <input type="search"placeholder='Введите трек-код' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '16px',color: ' #72777A',width: '270px',height: '40px',paddingLeft: '10px'}}/>
-           <Box ml={28} mt={0.5} sx={{width: '34px',height: '32px',backgroundColor: '#23262F',display: 'flex',justifyContent: 'center',alignItems: 'center',position: 'absolute',color: '#FCFCFD'}}>
+           <Box className="xs:hidden" ml={28} mt={0.5} sx={{width: '34px',height: '32px',backgroundColor: '#23262F',display: 'flex',justifyContent: 'center',alignItems: 'center',position: 'absolute',color: '#FCFCFD'}}>
            <SearchIcon/>
            </Box>
           </Nav>

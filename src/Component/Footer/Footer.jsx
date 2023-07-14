@@ -50,7 +50,7 @@ const Footer = () => {
             </Box>
           </Box>
           <Box>
-            <Box sx={{ display: "flex", gap: "10px", justifyContent: "end" }}>
+            <Box  sx={{ display: "flex", gap: "10px", justifyContent: "end" }}>
               <a
                 href="https://www.facebook.com/profile.php?id=100086490766152&mibextid=ZbWKwL"
                 target="_blank"
@@ -77,7 +77,7 @@ const Footer = () => {
             </Box>
             <br />
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography
+              <Typography className="ss:hidden"
                 style={{
                   fontFamily: "Poppins",
                   fontWeight: "300",
@@ -90,8 +90,8 @@ const Footer = () => {
               >
                 Documentation
               </Typography>
-              <hr style={{ color: "white", width: "16px", rotate: "90deg" }} />
-              <Typography
+              <hr className="ss:hidden"  style={{ color: "white", width: "16px", rotate: "90deg" }} />
+              <Typography className="ss:hidden"
                 style={{
                   fontFamily: "Poppins",
                   fontWeight: "300",
@@ -104,8 +104,8 @@ const Footer = () => {
               >
                 About Us
               </Typography>
-              <hr style={{ color: "white", width: "16px", rotate: "90deg" }} />
-              <Typography
+              <hr className="ss:hidden" style={{ color: "white", width: "16px", rotate: "90deg" }} />
+              <Typography className="ss:hidden"
                 style={{
                   fontFamily: "Poppins",
                   fontWeight: "300",
@@ -118,8 +118,8 @@ const Footer = () => {
               >
                 Pricing
               </Typography>
-              <hr style={{ color: "white", width: "16px", rotate: "90deg" }} />
-              <Typography
+              <hr className="ss:hidden" style={{ color: "white", width: "16px", rotate: "90deg" }} />
+              <Typography className="ss:hidden"
                 style={{
                   fontFamily: "Poppins",
                   fontWeight: "300",
@@ -132,8 +132,8 @@ const Footer = () => {
               >
                 FAQ
               </Typography>
-              <hr style={{ color: "white", width: "16px", rotate: "90deg" }} />
-              <Typography
+              <hr className="ss:hidden" style={{ color: "white", width: "16px", rotate: "90deg" }} />
+              <Typography className="ss:hidden"
                 style={{
                   fontFamily: "Poppins",
                   fontWeight: "300",
@@ -146,7 +146,7 @@ const Footer = () => {
               >
                 Support
               </Typography>
-              <hr style={{ color: "white", width: "16px", rotate: "90deg" }} />
+              <hr className="ss:hidden" style={{ color: "white", width: "16px", rotate: "90deg" }} />
             </Box>
           </Box>
         </Box>

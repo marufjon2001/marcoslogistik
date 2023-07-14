@@ -137,7 +137,7 @@ const Home = () => {
       <Box width={"100%"} height={"100%"} position={"relative"}>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Box position={"absolute"} width={"86%"} mt={12}>
-            <Typography
+            <Typography className="xs:text-2xl ss:text-3xl"
               style={{
                 fontFamily: "Inter",
                 fontWeight: "700",
@@ -183,7 +183,7 @@ const Home = () => {
             </Button>
           </Box>
         </Box>
-        <img style={{ width: "100%", height: "100%" }} src={tranck} alt="" />
+        <img  style={{ width: "100%", height: "100%" }} src={tranck} alt="" />
       </Box>
       <Box display={"flex"} justifyContent={"center"} mt={15}>
         <Box
@@ -484,13 +484,13 @@ const Home = () => {
         </Box>
       <Carousel autoplay>
     <Box>
-      <img style={{width: '100%',height: '660px'}} src={img1} alt="" />
+      <img style={{width: '100%',height: '680px'}} src={img1} alt="" />
     </Box>
     <Box>
-      <img style={{width: '100%',height: '660px'}} src={photo} alt="" />
+      <img style={{width: '100%',height: '680px'}} src={photo} alt="" />
     </Box>
     <Box>
-      <img style={{width: '100%',height: '660px'}} src={imglar} alt="" />
+      <img style={{width: '100%',height: '680px'}} src={imglar} alt="" />
     </Box>
   </Carousel>
       </Box>
@@ -532,7 +532,7 @@ const Home = () => {
             <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '86px',color: '#23262F'}}>Наши контакты</Typography>
             <a href="" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '20px',lineHeight: '40px',color: '#182F43',textDecoration: 'none'}}>+998(77)777-46-00</a>
             <a href="" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '20px',lineHeight: '40px',color: '#182F43',textDecoration: 'none'}}>info@marcos.uz</a>
-            <Box>
+            <Box sx={{display: 'flex'}}>
               <a href="https://www.facebook.com/profile.php?id=100086490766152&mibextid=ZbWKwL" target="_blank"><img src={fasebok} alt=""/></a>
               <a href="https://instagram.com/farobiyuz?igshid=MzRlODBiNWFlZA==" target="_blank"><img src={instagram} alt=""/></a>
               <a href="https://t.me/farobiy_uz" target="_blank"><img src={telegram} alt=""/></a>
