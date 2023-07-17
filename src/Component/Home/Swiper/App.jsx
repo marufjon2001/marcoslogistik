@@ -1,17 +1,18 @@
 import React, { Component } from "react";
+import { Typography } from "@mui/material";
 import Slider from "react-slick";
 import img from "../../images/Kasb/img.png";
 import img2 from "../../images/Kasb/img2.png";
 import img3 from "../../images/Kasb/img3.png";
 import img4 from "../../images/Kasb/img4.png";
-import { Typography } from "@mui/material";
+import "./main.css"
 
 export default class AutoPlay extends Component {
   render() {
     const settings = {
       dots: true,
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
       speed: 1500,
@@ -19,17 +20,17 @@ export default class AutoPlay extends Component {
       cssEase: "linear",
     };
     return (
-      <div
+      <div className="imglar"
         style={{ display: "flex", justifyContent: "end", overflow: "hidden",backgroundColor: '#FCFCFD',padding: '30px' }}
       >
-        <div style={{ width: "94.5%",flexWrap: 'wrap' }}>
-          <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '38px',color: '#23262F',}}>Наши преимущества</Typography>
+        <div className="caruseljs" style={{ width: "94.5%",flexWrap: 'wrap' }}>
+          <Typography className="swipperr" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '38px',color: '#23262F',}}>Наши преимущества</Typography>
           <br /><br />
-          <Slider {...settings}>
+          <Slider  {...settings}>
             <div>
               <img src={img} alt="" />
               <br />
-              <Typography
+              <Typography 
                 style={{
                   fontFamily: "Inter",
                   fontWeight: "700",
@@ -65,7 +66,7 @@ export default class AutoPlay extends Component {
                   color: "#23262F",
                 }}
               >
-               Надежность и безопасность
+               Надежность
               </Typography>
               <Typography
                 style={{
@@ -119,7 +120,7 @@ export default class AutoPlay extends Component {
                   color: "#23262F",
                 }}
               >
-               Долгосрочное партнерство
+               Долгосрочное
               </Typography>
               <Typography
                 style={{

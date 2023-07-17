@@ -1,0 +1,16 @@
+@media (max-width:400px) {
+    .swipperr {
+        font-size: 22px !important;
+    }
+    .slick-list {
+        width: 100% !important;
+    }
+    .caruseljs {
+        width: 900px !important;
+    }
+    .slick-track {
+        display: flex !important;
+        gap: 20px !important;
+    }
+
+}

@@ -5,7 +5,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 
 const Navbar1 = () => {
     return (
-        <Box width={"100%"} sx={{backgroundColor: '#23262F'}}>
+        <Box className="sm:hidden" width={"100%"} sx={{backgroundColor: '#23262F'}}>
       <Box width={'100%'} display={'flex'} justifyContent={'center'} sx={{padding: '10px'}}>
       <Box width={'87%'} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
         <Box sx={{display: 'flex',gap: '30px'}}>

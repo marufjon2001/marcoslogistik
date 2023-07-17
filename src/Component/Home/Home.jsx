@@ -134,12 +134,12 @@ const Home = () => {
      <Navbar/>
     <Box sx={{ backgroundColor: "#FFFFFF" }}>
       {/* tanck img */}
-      <Box width={"100%"} height={"100%"} position={"relative"}>
+      <Box  width={"100%"} height={"100%"} position={"relative"}>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Box position={"absolute"} width={"86%"} mt={12}>
-            <Typography className="xs:text-2xl ss:text-3xl"
+            <Typography className="text"
               style={{
-                fontFamily: "Inter",
+                fontFamily: "Inter", 
                 fontWeight: "700",
                 fontSize: "35px",
                 lineHeight: "40px",
@@ -150,7 +150,7 @@ const Home = () => {
               потребностей в логистике
             </Typography>
             <br />
-            <Typography
+            <Typography className="text_1"
               style={{
                 fontFamily: "Inter",
                 fontWeight: "400",
@@ -165,7 +165,7 @@ const Home = () => {
             <br />
             <br />
             <br />
-            <Button
+            <Button className="button"
               style={{
                 fontFamily: "Inter",
                 fontWeight: "700",
@@ -185,19 +185,19 @@ const Home = () => {
         </Box>
         <img  style={{ width: "100%", height: "100%" }} src={tranck} alt="" />
       </Box>
-      <Box display={"flex"} justifyContent={"center"} mt={15}>
-        <Box
+      <Box className="Map" display={"flex"} justifyContent={"center"} mt={15}>
+        <Box className="onas_box"
           sx={{
+            width: '95%',
             backgroundColor: "#FFFFFF",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             padding: "50px",
           }}
-          width={"93%"}
         >
-          <Box width={"45%"}>
-            <Typography
+          <Box className="onastext" width={"45%"}> 
+            <Typography className="onass"
               variant="h6"
               style={{
                 fontFamily: "Inter",
@@ -224,7 +224,6 @@ const Home = () => {
               «от-двери-до-двери».
             </Typography>
             <br />
-            <br />
             <Typography
               style={{
                 fontFamily: "Inter",
@@ -236,12 +235,11 @@ const Home = () => {
               }}
             >
               Мы поможем Вам развивать бизнес или просто <br /> отправить письмо
-              близкому человеку по доступным <br /> ценам. <br />
-              <br />
+              близкому человеку по доступным <br /> ценам.
               Мы ценим Ваше время!
             </Typography>
           </Box>
-          <Box width={"61%"} position={"relative"}>
+          <Box className="xarita_box" width={"61%"} position={"relative"}>
             <Box
               mt={5}
               ml={7}
@@ -255,7 +253,7 @@ const Home = () => {
                 position: "absolute",
               }}
             >
-              <img src={moskva} alt="" />
+              <img  src={moskva} alt="" />
               <Typography
                 style={{
                   fontFamily: "Inter",
@@ -282,7 +280,7 @@ const Home = () => {
             <Box
               ml={39}
               mt={25}
-              className="Москва"
+              className="Москва_xarita"
               sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -290,9 +288,12 @@ const Home = () => {
                 flexDirection: "column",
                 padding: "30px",
                 position: "absolute",
+                backgroundColor: '#FCFCFDD4',
+                width:"30%",
+
               }}
             >
-              <img src={moskva1} alt="" />
+              <img style={{borderRadius: '50px'}} className="imglar" src={moskva1} alt="" />
               <Typography
                 style={{
                   fontFamily: "Inter",
@@ -316,16 +317,17 @@ const Home = () => {
                 За 7 дней
               </Typography>
             </Box>
-            <img width={"100%"} height={"400px"} src={xarita} alt="" />
+            <img className="xarita" width={"100%"} height={"400px"} src={xarita} alt="" />
           </Box>
         </Box>
       </Box>
       <Box>
         <App />
       </Box>
+
       <Box mt={10} display={"flex"} justifyContent={"center"}>
         <Box>
-          <Typography
+          <Typography className="Часто"
             style={{
               fontFamily: "Inter",
               fontWeight: "700",
@@ -340,8 +342,8 @@ const Home = () => {
           <br />
           <br />
           {otpravka.map((item, index) => (
-            <Box onClick={() => menuitem(item)} sx={{ float: "left" }} ml={5}>
-              <Typography
+            <Box className="otpravka"  onClick={() => menuitem(item)} sx={{ float: "left" }} ml={5}>
+              <Typography className="otpravkabuton"
                 style={
                   item.active
                     ? {
@@ -379,6 +381,7 @@ const Home = () => {
           ))}
         </Box>
       </Box>
+
        {/*------------------------ collapse----------------------------- */}
       <Box sx={{ display: "flex", justifyContent: "center" }} mt={10}>
         <Box sx={{ width: "50%",}}>
@@ -437,6 +440,7 @@ const Home = () => {
         <br /><br />
         </Box>
       </Box>
+
       {/*----------------------------- Carusel ------------------------------*/}
       <Box sx={{width: '100%',position: 'relative'}}>
         
@@ -482,6 +486,7 @@ const Home = () => {
             </Box>
           </Box>
         </Box>
+
       <Carousel autoplay>
     <Box>
       <img style={{width: '100%',height: '680px'}} src={img1} alt="" />
