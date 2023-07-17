@@ -384,7 +384,7 @@ const Home = () => {
 
        {/*------------------------ collapse----------------------------- */}
       <Box sx={{ display: "flex", justifyContent: "center" }} mt={10}>
-        <Box sx={{ width: "50%",}}>
+        <Box className="coolapse" sx={{ width: "50%",}}>
           {text.map((item, index) => (
             <Box>
               <Accordion style={{border: 'none',boxShadow: 'none'}}>
@@ -442,16 +442,15 @@ const Home = () => {
       </Box>
 
       {/*----------------------------- Carusel ------------------------------*/}
-      <Box sx={{width: '100%',position: 'relative'}}>
-        
-        <Box id={'carusel'} sx={{position: 'absolute',zIndex: '10',display: 'flex',justifyContent: 'center',width: '100%'}}>
-          <Box display={'flex'}justifyContent={"space-between"} padding={5} alignItems={"end"}width={'90%'}>
-            <Box>
+      <Box sx={{width: '100%',position: 'relative'}}>  
+        <Box className="carusel12" id={'carusel'} sx={{position: 'absolute',zIndex: '10',display: 'flex',justifyContent: 'center',width: '100%'}}>
+          <Box className="carusel" display={'flex'}justifyContent={"space-between"} padding={5} alignItems={"end"}width={'90%'}>
+            <Box className="skidka">
              <Typography variant="h5" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '40px',color: '#FCFCFD'}}>Скидка 10% </Typography>
              <Typography variant="p" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '18px',lineHeight: '30px',color: '#FCFCFD'}}>Промокод действут с 20 сентября по 31 декабря</Typography>
             </Box>
-            <Box sx={{display: 'flex',justifyContent: 'center',backgroundColor: '#FCFCFD',padding: '35px 10px'}}>
-             <Box sx={{width: '90%'}}>
+            <Box className="carusell" sx={{display: 'flex',justifyContent: 'center',backgroundColor: '#FCFCFD',padding: '35px 10px'}}>
+             <Box className="caruselmenu" sx={{width: '90%'}}>
                <Box sx={{display: 'flex',gap: '15px'}}>
                 <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: '#23262F',backgroundColor: '#E6E8EC',width: '200px',height: '40px'}}>Автомобил</Button>
                 <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: '#FFFFFF',backgroundColor: '#23262F',width: '200px',height: '40px'}}> Товары</Button>
@@ -466,41 +465,40 @@ const Home = () => {
                 </Box><br />
                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}><NearMeIcon style={{color: '#979C9E'}}/> Москва</Typography>
                 <hr />
-                <Box sx={{display: 'flex',gap: '25px'}}>
-                <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}> Санкт-Петербург  </Typography>
+                <Box className="moskva" sx={{display: 'flex',gap: '25px'}}>
+                <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}> Санкт-Петербург</Typography>
                 <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}>Новосибирск</Typography>
                 <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '18px',color: '#979C9E',textDecoration: 'underline',}}>Челябинск</Typography>
                 </Box><br />
                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}><ZoomInMapIcon style={{color: '#979C9E'}}/> 3405 <span style={{fontSize: '11px',color: '#979C9E'}}>(кг)</span></Typography>
                  <hr />
-                 <Box sx={{display: 'flex',gap: '25px'}}>
+                 <Box className="Высота" sx={{display: 'flex',gap: '25px'}}>
                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '15px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}><EventSeatIcon style={{color: '#979C9E'}}/> Высота <span style={{fontSize: '11px',color: '#979C9E'}}>(кг)</span></Typography>
                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '15px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}>Длина <span style={{fontSize: '11px',color: '#979C9E'}}>(см)</span></Typography>
                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '15px',color: '#23262F',display: 'flex',gap: '10px',alignItems: 'center'}}>Ширина <span style={{fontSize: '11px',color: '#979C9E'}}>(см)</span></Typography>
                 </Box><br />
-                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '50px',color: '#979C9E',display: 'flex',gap: '55px',alignItems: 'center',}}> Стоимость доставки<span style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#979C9E',display: 'flex',gap: '10px',alignItems: 'center'}}>Дата доставки</span></Typography>
-                <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '20px',lineHeight: '20px',color: '#23262F',display: 'flex',gap: '75px',alignItems: 'center'}}>12 500 000 UZS<span style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '20px',lineHeight: '20px',color: '#23262F',display: 'flex',gap: '95px',alignItems: 'center'}}>31.12.2021</span></Typography>
+                <Typography className="stoimost" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '50px',color: '#979C9E',display: 'flex',gap: '55px',alignItems: 'center',}}> Стоимость доставки<span style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '18px',color: '#979C9E',display: 'flex',gap: '10px',alignItems: 'center'}}>Дата доставки</span></Typography>
+                <Typography className="stoimost" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '20px',lineHeight: '20px',color: '#23262F',display: 'flex',gap: '75px',alignItems: 'center'}}>12 500 000 UZS<span style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '20px',lineHeight: '20px',color: '#23262F',display: 'flex',gap: '95px',alignItems: 'center'}}>31.12.2021</span></Typography>
                 <br />
-             <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '15px',lineHeight: '24px',color: '#FFFFFF',backgroundColor: '#EA412B',width: '370px',height: '40px',padding: '20px'}}><Link style={{textDecoration: 'none',color: 'white'}} to={'/menu/posilku'}> Оформить</Link></Button>
+             <Button className="oformit" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '15px',lineHeight: '24px',color: '#FFFFFF',backgroundColor: '#EA412B',width: '100%',height: '40px',padding: '20px'}}><Link style={{textDecoration: 'none',color: 'white'}} to={'/menu/posilku'}> Оформить</Link></Button>
              </Box>
             </Box>
           </Box>
         </Box>
-
       <Carousel autoplay>
     <Box>
-      <img style={{width: '100%',height: '680px'}} src={img1} alt="" />
+      <img className="img12" style={{width: '100%',height: '680px'}} src={img1} alt="" />
     </Box>
     <Box>
-      <img style={{width: '100%',height: '680px'}} src={photo} alt="" />
+      <img  style={{width: '100%',height: '680px'}} src={imglar} alt="" />
     </Box>
     <Box>
-      <img style={{width: '100%',height: '680px'}} src={imglar} alt="" />
+      <img className="img123" style={{width: '100%',height: '680px'}} src={photo} alt="" />
     </Box>
   </Carousel>
       </Box>
       
-      <Box sx={{width: '100%',height: '100%',position: 'relative'}}>
+      <Box className="otzvi" sx={{width: '100%',height: '100%',position: 'relative'}}>
         <img style={{width: '100%',position: 'absolute',zIndex: '1'}} src={red} alt="" />
         <Box sx={{display: 'flex',justifyContent: 'center'}}pt={10}>
           <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '38px',color: '#23262F'}}>Отзывы от компании</Typography>
@@ -528,8 +526,8 @@ const Home = () => {
         </Box>
       </Box>
       <br /><br /><br />
-      <Box sx={{display: 'flex',justifyContent: 'center'}} mt={10}>
-        <Box sx={{width: '86%',display: 'flex',alignItems: 'center',gap: '150px'}}mb={10}>
+      <Box  sx={{display: 'flex',justifyContent: 'center'}}>
+        <Box className="kontakt" sx={{width: '86%',display: 'flex',alignItems: 'center',gap: '150px'}}mb={10}>
            <Box>
             <a href="https://www.google.com/maps/dir/Eman+Group,+5+Djami+Square,+Tashkent+100057,+O%CA%BBzbekiston/Shahriston+ko'chasi,+Tashkent,+O%60zbekiston/@41.3542885,69.2477575,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x38ae8c92267a3301:0x3cb8b146e2b3910e!2m2!1d69.2538121!2d41.3555108!1m5!1m1!1s0x38ae8cae3ab5871f:0x15743fc46216c6e1!2m2!1d69.2772063!2d41.3521537?hl=UZ&entry=ttu" target="_blank"><img src={gps} alt="" /></a>
            </Box>

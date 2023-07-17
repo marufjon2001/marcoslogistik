@@ -39,7 +39,7 @@ export default class AutoPlay extends Component {
                   color: "#23262F",
                 }}
               >
-                Опыт и профессионализм
+                 профессионализм
               </Typography>
               <Typography
                 style={{
