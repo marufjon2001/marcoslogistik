@@ -487,13 +487,13 @@ const Home = () => {
         </Box>
       <Carousel autoplay>
     <Box>
-      <img className="img12" style={{width: '100%',height: '680px'}} src={img1} alt="" />
+      <img style={{width: '100%',height: '680px'}} src={img1} alt="" />
     </Box>
     <Box>
-      <img  style={{width: '100%',height: '680px'}} src={imglar} alt="" />
+      <img style={{width: '100%',height: '680px'}} src={imglar} alt="" />
     </Box>
     <Box>
-      <img className="img123" style={{width: '100%',height: '680px'}} src={photo} alt="" />
+      <img style={{width: '100%',height: '680px'}} src={photo} alt="" />
     </Box>
   </Carousel>
       </Box>

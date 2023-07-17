@@ -8,6 +8,7 @@ import { Input } from 'antd';
 import Navbarwhite from "../../../Navbar/Navbarwhite/Navbarwhite"
 import shirina from "../../../images/Posilku/shirina.svg"
 import { Link } from "react-router-dom";
+import "../Tovar/Posilku.css"
 const { TextArea } = Input;
 const onChange = (e) => {
   console.log(e);
@@ -64,7 +65,7 @@ const Posilku = () => {
                         {
                             text.map((item)=>(
                               <Link to={item.to}>
-                              <Button onClick={() => menuitem(item)} style={item.activee ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'black',padding: '12px, 16px, 12px, 16px',backgroundColor: 'white',height: '40px',width: '200px',border: '2px solid #E6E8EC'}:
+                              <Button className="posilku" onClick={() => menuitem(item)} style={item.activee ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'black',padding: '12px, 16px, 12px, 16px',backgroundColor: 'white',height: '40px',width: '200px',border: '2px solid #E6E8EC'}:
                               {fontFamily: 'Inter',fontWeight: '700',fontSize: '12px',lineHeight: '16px',color: 'white',padding: '12px, 16px, 12px, 16px',backgroundColor: '#23262F',height: '40px',width: '200px'}}>{item.text}</Button>
                               </Link>
                             ))
@@ -72,7 +73,7 @@ const Posilku = () => {
                     </Box>
                     <br></br><br />
                        <Box>
-                        <Box sx={{width: '42%',border: '1px solid #DEE2E6',backgroundColor: '#FFE5E5',padding: '22px 20px'}}>
+                        <Box className="redddd" sx={{width: '42%',border: '1px solid #DEE2E6',backgroundColor: '#FFE5E5',padding: '22px 20px'}}>
                             <Box>
                                 <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '18px',lineHeight: '18px'}}>Список запрещенных предметов</Typography>
                                 <ul style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '25px',color: '#23262F'}}>
@@ -126,7 +127,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                            
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Имя получателя</Typography>
@@ -139,8 +141,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
-                           
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Комментарии и пожелания</Typography>
                         </Box>
@@ -155,8 +157,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
-                           
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Телефон получателя</Typography>
                          <input type="number" placeholder="Номер телефона" style={{
@@ -168,8 +170,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
-                           
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                           }}/>
                         </Box>
                        </Box>
@@ -210,8 +212,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
-                           
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Почтовый индекс отправителя</Typography>
                          <input  placeholder="100011" style={{
@@ -223,8 +225,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
-                           
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Выберите дату отправки</Typography>
                         <input type="datetime-local" style={{
@@ -236,8 +238,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
-                           
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                           }}/>
                         </Box>
                         <Box sx={{width: '50%'}}>
@@ -268,8 +270,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
-                           
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Почтовый индекс получателя</Typography>
                          <input  placeholder="125009" style={{
@@ -281,8 +283,8 @@ const Posilku = () => {
                             lineHeight: '16px',
                             borderRadius: "4px",
                             borderColor: '#E3E5E5',
-                            paddingLeft: '10px'
-                           
+                            paddingLeft: '10px',
+                            border: '1px solid #E3E5E5'
                           }}/>
                         </Box>
                        </Box>

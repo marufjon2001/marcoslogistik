@@ -13,7 +13,7 @@ const Otslejevaniy = () => {
             <Box>
                 <Box sx={{position: 'relative',display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column'}}>
                     <br /><br />
-                <input type="search"placeholder='Введите трек-код' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '16px',color: ' #72777A',width: '270px',height: '40px',paddingLeft: '10px'}}/>
+                <input type="search"placeholder='Введите трек-код' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '16px',color: ' #72777A',width: '270px',height: '40px',paddingLeft: '10px',border: '2px solid black'}}/>
            <Box mt={-1}ml={27} sx={{width: '34px',height: '32px',backgroundColor: '#23262F',display: 'flex',justifyContent: 'center',alignItems: 'center',position: 'absolute',color: '#FCFCFD'}}>
            <SearchIcon/>
            </Box><br />
