@@ -13,6 +13,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import { useStore } from "../../store/store"
+import "../Navbarwhite/navbar.css"
 import Navbarwhite1 from "../../Navbar/Navbarwhite/Navbarwhite1"
 import { Link } from 'react-router-dom';
 
@@ -57,11 +58,7 @@ function BasicExample() {
   const [open, setOpen] = React.useState(false);
   const isFalse=useStore((state)=>state.isFalse)
 
-
-  
   const increasePopulation = useStore((state) => state.increasePopulation)
-
-
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -106,14 +103,14 @@ function BasicExample() {
         </BootstrapDialogTitle>
        <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',padding: '35px 25px'}}>
         <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '30px',color: '#23262F'}}>Вход в кабинет </Typography>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '30px',color: '#72777A'}}>Введите логин и пароль для входа </Typography>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '30px',color: '#72777A'}}> в личный кабинет</Typography>
+        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '25px',color: '#72777A'}}>Введите логин и пароль для входа </Typography>
+        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '25px',color: '#72777A'}}> в личный кабинет</Typography>
         <input type="email" placeholder='Введите E-mail' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '2px solid #E3E5E6'}} />
         <br />
         <input type="password" placeholder='Введите пароль' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}} />
       <br />
         <Button  style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '16px',lineHeight: '16px',color: 'white',height: '40px',width: '69.5%',backgroundColor: '#EA412B',padding: '20px'}}>Войти</Button>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '40px',color: '#23262F'}}>Еще не зарегистрированы? <span onClick={setModal} style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#CB0E16',cursor: 'pointer'}}>Зарегистрироваться</span></Typography>
+        <Typography className='nav_tex' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '20px',color: '#23262F'}}>Еще не зарегистрированы? <span onClick={setModal} style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#CB0E16',cursor: 'pointer'}}>Зарегистрироваться</span></Typography>
        </Box>
       </BootstrapDialog>    
 {/* --------------------------------------------------------------modalka---------------------------------- */}

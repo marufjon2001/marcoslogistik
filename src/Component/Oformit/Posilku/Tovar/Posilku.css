@@ -7,4 +7,22 @@
     width: 100% !important;
     padding: 15px !important;
    }
+   .zapolnit {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+   }
+   .inputbox {
+      width: 100% !important;
+   }
+   .input_1 {
+      width: 100% !important;
+   }
+   .inputtextare {
+      width: 84% !important;
+   }
+   .textarea {
+      width: 84% !important;
+   }
 }

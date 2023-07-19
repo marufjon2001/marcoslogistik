@@ -11,6 +11,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import zayafka from "../images/Zayafka/zayafka.png"
 import { Link } from 'react-router-dom';
+import "../Oplata/main.css"
 import Navbarwhite from "../Navbar/Navbarwhite/Navbarwhite"
 
 const style = {
@@ -62,9 +63,9 @@ const Oplata = () => {
                 </Box>
                 {
                     click.map((item,index)=>(
-                        <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column'}}>
+                        <Box  sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column'}}>
                     <br />
-                    <Box onClick={handleOpen} sx={{border: '2px solid #E6E8EC',height: '55px',width: '28.5%',display: 'flex',alignItems: 'center'}}>
+                    <Box className="oplata" onClick={handleOpen} sx={{border: '2px solid #E6E8EC',height: '55px',width: '28.5%',display: 'flex',alignItems: 'center'}}>
                          <img style={{padding: '10px 20px',cursor: 'pointer'}} src={item.rasm} alt="" />
                          <Typography style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '16px',lineHeight: '24px',color: '#23262F',cursor: 'pointer'}}>{item.click}</Typography>
                     </Box>
@@ -74,9 +75,9 @@ const Oplata = () => {
             </Box>
             </Box>
                 <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column'}}>
-                     <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '120px',color: '#23262F'}}
+                     <Typography className='koplate' style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '120px',color: '#23262F'}}
                      >К оплате: 25 390 000 UZS</Typography>
-                      <Button style={{ width: '10%',fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight:"16px",color: '#23262F',height: '40px',border: '2px solid #E6E8EC',padding: '20px'}}><Link style={{textDecoration: 'none',color: '#23262F'}} to={"/menu/Tovar"}>Отмена </Link></Button>                  
+                      <Button className='oplatabtn' style={{ width: '10%',fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight:"16px",color: '#23262F',height: '40px',border: '2px solid #E6E8EC',padding: '20px'}}><Link style={{textDecoration: 'none',color: '#23262F'}} to={"/menu/Tovar"}>Отмена </Link></Button>                  
                 </Box>
    {/* ------------------------------------  MOdal   ----------------------------------------- */}
                 <div>
@@ -88,8 +89,8 @@ const Oplata = () => {
         slots={{ backdrop: Backdrop }}
       >
         <Fade in={open}>
-          <Box sx={style}>
-           <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',gap: '10px',padding: '5%',}}>
+          <Box className="zayafkaimg" sx={style}>
+           <Box className="zayafkaimg" sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',gap: '10px',padding: '5%',}}>
              <img src={zayafka} alt="" />
              <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '32px',color: '#23262F'}}>Заявка отправлена</Typography>
              <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '18px',lineHeight: '25px',color: '#23262F', textAlign:"center" }}>Вы можете оплатить ваш заказ в любое удобное время <br /> в разделе “Личный кабинет”
@@ -97,7 +98,7 @@ const Oplata = () => {
              <Link to={'/menu/Личный кабинет'}>
              <Button style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '20px',color: 'white',height: '40px',backgroundColor: '#CB0E16'}}>Посмотреть статус</Button>
              </Link>
-             <Button onClick={()=>handleClose(true)} style={{width: '16.5%', fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '20px',color: 'black',height: '40px',backgroundColor: 'white',border: '2px solid #E6E8EC',}}> Отмена</Button>
+             <Button className='otmenabtn' onClick={()=>handleClose(true)} style={{width: '16.5%', fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '20px',color: 'black',height: '40px',backgroundColor: 'white',border: '2px solid #E6E8EC',}}> Отмена</Button>
            </Box>
           </Box>
         </Fade>

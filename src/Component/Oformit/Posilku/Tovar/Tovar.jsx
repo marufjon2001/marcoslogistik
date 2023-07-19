@@ -89,7 +89,7 @@ const Posilku = () => {
                       <Box sx={{position: 'relative'}}>
                     <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '32px',color: '#23262F'}}>Вес и габариты</Typography><br />
                         <Box sx={{display: 'flex',flexWrap: 'wrap'}}>
-                            <Box sx={{width: '50%'}}>
+                            <Box className="inputbox" sx={{width: '50%'}}>
                     <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '50px',color: '#979C9E'}}>Вес(кг)</Typography>
                     <img style={{position: "absolute",padding: '8px 5px'}} src={medal} alt="" />
                     <input style={{width: '85%',height: '40px',paddingLeft: '30px',border: '2.5px solid #E3E5E5'}}/>
@@ -99,7 +99,7 @@ const Posilku = () => {
                     <input  style={{width: '85%',height: '40px',paddingLeft: '30px',border: '2.5px solid #E3E5E5'}}/>
                     <br />
                             </Box>
-                            <Box sx={{width: '50%'}}>
+                            <Box className="inputbox" sx={{width: '50%'}}>
                             <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '50px',color: '#979C9E'}}>Длина(см)</Typography>
                     <img style={{position: "absolute",padding: '8px 5px'}} src={medal} alt="" />
                     <input style={{width: '85%',height: '40px',paddingLeft: '30px',border: '2.5px solid #E3E5E5'}}/>
@@ -110,13 +110,13 @@ const Posilku = () => {
                     <br />
                             </Box>
                         </Box>
-                    <Typography style={active ? {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: "black",cursor: 'pointer'}: {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#979C9E',cursor: 'pointer'}} onClick={()=>setactive(true)}>Заполните данные о посылке</Typography>
+                    <Typography style={active ? {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '30px',color: "black",cursor: 'pointer'}: {fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '30px',color: '#979C9E',cursor: 'pointer'}} onClick={()=>setactive(true)}>Заполните данные о посылке</Typography>
                   
                     <Box>
                 {/* ------------------    Заполните данные------------------------------  */}
                        {
-                        active2 ? <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}}>
-                        <Box sx={{width: '50%'}}>
+                        active2 ? <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}}className="zapolnit">
+                        <Box className="inputbox" sx={{width: '50%'}}>
                          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Телефон отправителя</Typography>
                          <input type="number"  placeholder="Номер телефона" style={{
                             width: '85%',
@@ -146,7 +146,7 @@ const Posilku = () => {
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Комментарии и пожелания</Typography>
                         </Box>
-                        <Box sx={{width: '50%'}}>
+                        <Box className="inputbox" sx={{width: '50%'}}>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Адрес получателя</Typography>
                           <input type="number" placeholder="Номер телефона" style={{
                             width: '85%',
@@ -183,10 +183,10 @@ const Posilku = () => {
                     <br />
                     {
                       active ? 
-                    <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}} mt={6}>
-                        <Box sx={{width: '50%'}}>
+                    <Box className="zapolnit" sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}} mt={6}>
+                        <Box className="inputbox" sx={{width: '50%'}}>
                          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Город отправителя</Typography>
-                         <Select
+                         <Select className="textarea"
                          placeholder='Ташкент'
                           mode="tags"
                           style={{
@@ -242,9 +242,9 @@ const Posilku = () => {
                             border: '1px solid #E3E5E5'
                           }}/>
                         </Box>
-                        <Box sx={{width: '50%'}}>
+                        <Box className="inputbox" sx={{width: '50%'}}>
                          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Город получателя</Typography>
-                         <Select
+                         <Select className="textarea"
                          placeholder='Москва'
                           mode="tags"
                           style={{
@@ -297,8 +297,8 @@ const Posilku = () => {
             <br />
                 <Box sx={{display: 'flex',justifyContent: 'center'}}>
                  {
-                  active2 ?  <Box sx={{width: '85%'}}>
-                  <TextArea placeholder="Комментарий" allowClear onChange={onChange} style={{height: '150px',fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '30px',color: '#72777A'}} />
+                  active2 ?  <Box sx={{width: '85%'}} >
+                  <TextArea className="inputtextare" placeholder="Комментарий" allowClear onChange={onChange} style={{height: '150px',fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '30px',color: '#72777A'}} />
                   <br /><br />
                   <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight:'30px'}}>Нажимая на кнопку вы соглашаетесь с условиями отправки и принимаете <span style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight:'80px',color: '#CB0E16'}}> оферту и политику</span> конфиденциальности</Typography>
                   <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '50px',color: '#23262F'}}> К оплате: 2500 ₸</Typography><br />

@@ -14,7 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import { useStore } from '../store/store.js';
-import "./main.css"
+import "../Navbar/main.css"
 import { Link } from 'react-router-dom';
 
 
@@ -116,7 +116,7 @@ function BasicExample() {
         <input type="password" placeholder='Введите пароль' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}} />
       <br />
         <Button  style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '16px',lineHeight: '16px',color: 'white',height: '40px',width: '69.5%',backgroundColor: '#EA412B',padding: '20px'}}>Войти</Button>
-        <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '40px',color: '#23262F'}}>Еще не зарегистрированы? <span onClick={setModal} style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#CB0E16',cursor: 'pointer'}}>Зарегистрироваться</span></Typography>
+        <Typography  style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '40px',color: '#23262F'}}>Еще не зарегистрированы? <span  onClick={setModal} style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '10px',color: '#CB0E16',cursor: 'pointer'}}>Зарегистрироваться</span></Typography>
        </Box>
       </BootstrapDialog>    
 {/* --------------------------------------------------------------modalka---------------------------------- */}

@@ -1,0 +1,10 @@
+@media (max-width:400px) {
+   .nav_tex {
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-left: 1% !important;
+   }
+  
+}

@@ -6,6 +6,7 @@ import ManageHistorySharpIcon from '@mui/icons-material/ManageHistorySharp';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import lichniy from "../images/Lichniy/lichniy.png"
 import Draver from "../Lichniy/Draver/Draver"
+import "./main.css"
 import { Link } from 'react-router-dom';
 const Lichniy = () => {
     const[text,settext] = useState(false)

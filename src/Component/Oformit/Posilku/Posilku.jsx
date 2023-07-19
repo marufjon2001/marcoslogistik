@@ -6,6 +6,7 @@ import "../Posilku/Tovar/Posilku.css"
 import { useState } from 'react';
 import { Select } from 'antd';
 import { Input } from 'antd';
+import "../Posilku/Tovar/Posilku.css"
 import Navbarwhite from "../../Navbar/Navbarwhite/Navbarwhite"
 import { Link } from "react-router-dom";
 const { TextArea } = Input;
@@ -81,10 +82,10 @@ const Posilku = () => {
                     <Box>
                 {/* ------------------    Заполните данные------------------------------  */}
                        {
-                        active2 ? <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}}>
-                        <Box sx={{width: '50%'}}>
+                        active2 ? <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}}className="zapolnit">
+                        <Box className="inputbox" sx={{width: '50%'}}>
                          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Телефон отправителя</Typography>
-                         <input type="number"  placeholder="Номер телефона" style={{
+                         <input className="input_1" type="number"  placeholder="Номер телефона" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
@@ -98,7 +99,7 @@ const Posilku = () => {
                            
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Имя получателя</Typography>
-                         <input  placeholder="Введите имя отправителя" style={{
+                         <input className="input_1" placeholder="Введите имя отправителя" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
@@ -113,9 +114,9 @@ const Posilku = () => {
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Комментарии и пожелания</Typography>
                         </Box>
-                        <Box sx={{width: '50%'}}>
+                        <Box className="inputbox" sx={{width: '50%'}}>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Адрес получателя</Typography>
-                          <input type="number" placeholder="Номер телефона" style={{
+                          <input className="input_1" type="number" placeholder="Номер телефона" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
@@ -129,7 +130,7 @@ const Posilku = () => {
                            
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Телефон получателя</Typography>
-                         <input type="number" placeholder="Номер телефона" style={{
+                         <input className="input_1" type="number" placeholder="Номер телефона" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
@@ -153,10 +154,10 @@ const Posilku = () => {
             {/* --------------------------- Заполните данные о посылке--------------- */}
                     {
                       active ? 
-                    <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}} mt={6}>
-                        <Box sx={{width: '50%'}}>
+                    <Box sx={{width: '100%',display: 'flex',flexWrap: 'wrap'}} mt={6}className="zapolnit">
+                        <Box className="inputbox" sx={{width: '50%'}}>
                          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Город отправителя</Typography>
-                         <Select
+                         <Select className="input_1"
                          placeholder='Ташкент'
                           mode="tags"
                           style={{
@@ -173,7 +174,7 @@ const Posilku = () => {
                           options={options}
                         />
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Адрес отправителя</Typography>
-                         <input  placeholder="Алишер Навои 12" style={{
+                         <input className="input_1" placeholder="Алишер Навои 12" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
@@ -187,7 +188,7 @@ const Posilku = () => {
                            
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Почтовый индекс отправителя</Typography>
-                         <input  placeholder="100011" style={{
+                         <input className="input_1" placeholder="100011" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
@@ -201,7 +202,7 @@ const Posilku = () => {
                            
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Выберите дату отправки</Typography>
-                        <input type="datetime-local" style={{
+                        <input className="input_1" type="datetime-local" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
@@ -215,9 +216,9 @@ const Posilku = () => {
                            
                           }}/>
                         </Box>
-                        <Box sx={{width: '50%'}}>
+                        <Box className="inputbox" sx={{width: '50%'}}>
                          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Город получателя</Typography>
-                         <Select
+                         <Select className="input_1"
                          placeholder='Москва'
                           mode="tags"
                           style={{
@@ -234,7 +235,7 @@ const Posilku = () => {
                           options={options}
                         />
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Адрес получателя</Typography>
-                         <input  placeholder="Тверская ел 12" style={{
+                         <input className="input_1" placeholder="Тверская ел 12" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
@@ -247,7 +248,7 @@ const Posilku = () => {
                             border: '1px solid #E3E5E5'
                           }}/>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '40px',color: '#979C9E'}}>Почтовый индекс получателя</Typography>
-                         <input  placeholder="125009" style={{
+                         <input className="input_1" placeholder="125009" style={{
                             width: '85%',
                             height: '30px',
                             fontFamily: 'Inter',
