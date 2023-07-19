@@ -1,3 +1,27 @@
 @media (max-width:400px) {
-    
+  .lichniy_t {
+    margin-left: 70px !important;
+  }
+  .info {
+    font-size: 18px !important;
+    line-height: 25px !important;
+  }
+  .inputtex {
+    width: 220px !important;
+  }
+  .obnovitbtn {
+    width: 61% !important;
+    font-size: 12px !important;
+  }
+  .istory {
+    width: 100% !important;
+    margin-left: 70px !important;
+}
+.istory_tex {
+    font-size: 18px !important;
+}.novybtn {
+    width: 80% !important;
+    flex-wrap: wrap !important;
+    background-color: red !important;
+}
 }
