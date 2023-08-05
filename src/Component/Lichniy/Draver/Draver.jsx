@@ -74,7 +74,7 @@ export default function SwipeableTemporaryDrawer() {
         <React.Fragment key={anchor}>
         {
           text.map((item,index)=>(
-            <Box onClick={toggleDrawer(anchor, true)}sx={{display: 'flex',alignItems: 'center',cursor: 'pointer',padding: '2px',gap: '40px'}}>
+            <Box className="draver" onClick={toggleDrawer(anchor, true)}sx={{display: 'flex',alignItems: 'center',cursor: 'pointer',padding: '2px',gap: '40px'}}>
          <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '12px',color: '#252426'}}>{item.nomer}</Typography>
          <Typography style={{display: 'flex',alignItems: 'center'}}><Radio
         value="b"

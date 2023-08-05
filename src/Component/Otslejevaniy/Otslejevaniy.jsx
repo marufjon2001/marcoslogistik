@@ -4,13 +4,14 @@ import img from "../images/Otslejevaniy/img.png"
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import Radio from '@mui/material/Radio';
+import "./main.css"
 
 const Otslejevaniy = () => {    
     return (
         <Box sx={{backgroundColor: '#FCFCFD',width: '100%',height: '100%'}}>
             <Navbarwhite/>
             <img style={{width: '100%'}} src={img} alt="" />
-            <Box>
+            <Box className="posilkuuu">
                 <Box sx={{position: 'relative',display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column'}}>
                     <br /><br />
                 <input type="search"placeholder='Введите трек-код' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '16px',color: ' #72777A',width: '270px',height: '40px',paddingLeft: '10px',border: '2px solid black'}}/>

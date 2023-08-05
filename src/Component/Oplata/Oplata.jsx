@@ -50,11 +50,11 @@ const Oplata = () => {
  const [open, setOpen] = React.useState(false);
  const handleOpen = () => setOpen(true);
  const handleClose = () => setOpen(false);
-
+ 
     return (
         <Box>
             <Navbarwhite/>
-            <img style={{width: '100%'}} src={oplata} alt="" />
+            <img className='img' style={{width: '100%'}} src={oplata} alt="" />
             <Box sx={{display: 'flex',justifyContent: 'center'}}>
             <Box sx={{width: '84%'}} mt={5}>
                 <br /><br />

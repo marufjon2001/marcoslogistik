@@ -1,27 +1,46 @@
 @media (max-width:400px) {
-  .lichniy_t {
-    margin-left: 70px !important;
-  }
-  .info {
-    font-size: 18px !important;
-    line-height: 25px !important;
-  }
-  .inputtex {
-    width: 220px !important;
-  }
-  .obnovitbtn {
-    width: 61% !important;
-    font-size: 12px !important;
-  }
-  .istory {
+    .lichniy {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .lichniy_text {
+        margin-top: 0px !important;
+        width: 100% !important;
+    }
+    .istory_tex {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .novybtn {
+     width: 100% !important;
+     display: flex !important; 
+     justify-content: center !important;
+    }
+    .hr {
+        margin-left: 30px !important;
+        width: 80% !important;
+    }
+}
+
+
+
+
+
+
+@media (max-width:700px) {
+ .Navbarwhite {
+  display: none !important;
+ }
+ .draver {
     width: 100% !important;
-    margin-left: 70px !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 0px !important;
+ }
 }
-.istory_tex {
-    font-size: 18px !important;
-}.novybtn {
-    width: 80% !important;
-    flex-wrap: wrap !important;
-    background-color: red !important;
-}
+@media (min-width:700px) {
+ .lichniyres {
+    display: none !important;
+ }
 }

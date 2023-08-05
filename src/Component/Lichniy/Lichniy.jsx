@@ -1,37 +1,32 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography,createTheme } from '@mui/material';
 import React, { useState } from 'react';
 import Navbarwhite from "../Navbar/Navbarwhite/Navbarwhite"
 import Person2SharpIcon from '@mui/icons-material/Person2Sharp';
 import ManageHistorySharpIcon from '@mui/icons-material/ManageHistorySharp';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import lichniy from "../images/Lichniy/lichniy.png"
+import LichniyNav from "../Lichniy/LichniyNav/Lichniynav"
 import Draver from "../Lichniy/Draver/Draver"
 import "./main.css"
-import { Link } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
+import LichniyLink from "../Lichniy/LichniyNav/Lichniylink"
 const Lichniy = () => {
-    const[text,settext] = useState(false)
+    const[text,settext] = useState(true)
     const[text1,settext1] = useState(false)
-
- let menuitem = ()=>(
+  let menuitem = ()=>(
     settext(!text),
     settext1(!text1)
- )
-
-   
-    return (
+  )
+ return (
         <Box>
+            <Box className="Navbarwhite">
             <Navbarwhite/>
-            <Box  sx={{display: 'flex',gap: '30px'}}mt={5}>
-                <Box className="profil" sx={{width: '17%',display: 'flex',justifyContent: "end"}} >
-                    <Box width={'60%'}>
-                    <Typography onClick={menuitem} style={text ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><Person2SharpIcon/>Профиль</Typography>
-                    <Typography onClick={menuitem} style={text1 ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ManageHistorySharpIcon/>История <br /> отправлений</Typography>
-                    <Link style={{textDecoration: 'none'}} to={'/menu/Oplata'}>
-                    <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '80px',color: '#EA412B',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ExitToAppIcon/>Выйти</Typography>
-                    </Link>
-                    </Box>
-                </Box>
-                {
+            </Box>
+            <Box className="lichniyres">
+             <LichniyNav/>
+            </Box>
+            <Box className="lichniy" sx={{display: 'flex',gap: '30px'}}mt={5}>
+                {/* {
                     text ?""
                     :<Box className="lichniy_t" sx={{width: '75%',display:"flex",flexWrap: 'wrap',gap: '20px'}}>
                     <Box sx={{width: '48%',}}mt={2}>
@@ -53,8 +48,8 @@ const Lichniy = () => {
                     </Link>
                     <br></br><br />
                     </Box>
-                }
-                {
+                } */}
+                {/* {
                     text ?<Box className="istory" sx={{width: '80%',position: 'relative'}}>
                         <Typography className="istory_tex" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '70px',color: '#23262F'}}>История отправлений</Typography>
                         <Box className="novybtn" sx={{display: 'flex',gap: '10px',flexWrap: 'wrap'}}>
@@ -62,7 +57,7 @@ const Lichniy = () => {
                             <Button style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '14px',lineHeight: '16px',color: '#EA412B',backgroundColor: '#FFF0F1',height: '40px',border: '2px solid #FFF0F1'}}>Новые (3)</Button><br /><br />
                              <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '12px',lineHeight: '16px',color: '#72777A',display: 'flex',gap: '10px'}}>Номер заказа <img src={lichniy} alt="" /></Typography>
                             </Box>
-                            <Box>
+                               <Box>
                             <Button style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '14px',lineHeight: '16px',color: '#23262F',height: '40px',border: '2px solid #E6E8EC'}}>В процессе (10)</Button><br /><br />
                             <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '12px',lineHeight: '16px',color: '#72777A',display: 'flex',gap: '10px'}}>Статус<img src={lichniy} alt="" /></Typography>
                             </Box>
@@ -84,11 +79,11 @@ const Lichniy = () => {
                             </Box>
                         </Box>
                     <hr style={{border: '0.2px solid black',width: '98%'}}/>
-                    {/* <Draver/> */}
+                    <Draver/>
                     <br /><br /><br />
                     </Box>
                     :""
-                }
+                } */}
             </Box>
         </Box>
     );
