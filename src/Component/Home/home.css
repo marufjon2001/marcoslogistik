@@ -117,3 +117,111 @@
    display: none !important;
   }
 }
+
+
+@media (max-width: 768px) {
+  .text {
+    width: 59.2% !important;
+    font-size: 20px !important;
+    margin-top: -20px !important;
+    line-height: 20px !important;
+  }
+  .text_1 {
+    width: 100% !important;
+    font-size: 15px !important;
+    margin-top: -10px !important;
+    line-height: 20px !important;
+  }
+  .button {
+    margin-top: -13% !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    width: 23% !important;
+    height: 35px !important;
+  }
+  .Map {
+    margin-top: -0% !important;
+  }
+  .onastext {
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+  .onas_box {
+    margin-left: -50px !important;
+  }
+  .onass {
+    font-size: 20px !important;
+  }
+  .xarita_box {
+    width: 150% !important;
+  }
+  .xarita {
+    width: 800px !important;
+  }
+  .Москва {
+    width: 40% !important;
+    height: 70% !important;
+    padding: 10px !important;
+  }
+  .Москва_xarita {
+    width: 40% !important;
+    height: 60% !important;
+    margin-left: 72% !important;
+    margin-top: 30% !important;
+  }
+  .imglar {
+    border-radius: 50px;
+  }
+  .Часто {
+    font-size: 28px !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: 35px !important;
+  }
+  .coolapse {
+   width: 100% !important;
+   padding: 10px !important;
+  }
+  .carusel {
+   width: 100% !important;
+   gap: 48px !important;
+  }
+  .skidka {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+  }
+  .caruselmenu {
+   width: 80% !important;
+  }
+  .moskva {
+   width: 105% !important;
+  }
+  .stoimost {
+   width: 400px !important;
+  }
+  .otzvi {
+   display: none;
+  }
+  .kontakt {
+   display: flex !important;
+   justify-content: center !important;
+   align-items: center !important;
+   flex-direction: column-reverse;
+   margin-top: -35px !important;
+  }
+  .carusel12 {
+   width: 100% !important;
+   overflow: hidden !important;
+  }
+  .carusell {
+   box-sizing: border-box;
+  }
+  .Высота {
+   width: 100% !important;
+   display: none !important;
+  }
+}
+

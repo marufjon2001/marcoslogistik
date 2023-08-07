@@ -80,7 +80,7 @@ function BasicExample() {
     <Box>
      <Navbar1/>
      <Box>
-    <Navbar style={{backgroundColor: '#23262F',width: '100%'}} expand="lg">
+    <Navbar  style={{backgroundColor: '#23262F',width: '100%'}} expand="lg">
       <Container className='navbar'>
         <Link to={"/"}>
         <img style={{height: '40px'}} src={navbar} alt="" />
@@ -88,12 +88,12 @@ function BasicExample() {
         <Navbar.Toggle  aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className='nav' id="basic-navbar-nav">
           <Nav style={{position: 'relative'}} className="me-auto">
-           <input className="" type="search"placeholder='Введите трек-код' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '16px',color: ' #72777A',width: '270px',height: '40px',paddingLeft: '10px'}}/>
-           <Box  ml={28} mt={0.5} sx={{width: '34px',height: '32px',backgroundColor: '#23262F',display: 'flex',justifyContent: 'center',alignItems: 'center',position: 'absolute',color: '#FCFCFD'}}>
+           <input className="searchinpu" type="search"placeholder='Введите трек-код' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '16px',color: ' #72777A',width: '270px',height: '40px',paddingLeft: '10px'}}/>
+           <Box className="search" ml={28} mt={0.5} sx={{width: '34px',height: '32px',backgroundColor: '#23262F',display: 'flex',justifyContent: 'center',alignItems: 'center',position: 'absolute',color: '#FCFCFD'}}>
            <SearchIcon/>
            </Box>
           </Nav>
-          <Box sx={{display: 'flex',gap: '22px'}}>
+          <Box className="navbtnall" sx={{display: 'flex',gap: '22px'}}>
       <Button  style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#23262F',width: '138px',backgroundColor: '#FCFCFD',padding: '13px',height: '40px'}}> <Link style={{textDecoration: 'none',color: '#23262F'}} to={'menu'}> Оформить заявку</Link></Button>
      <Button  style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '10px',lineHeight: '12px',color: '#FCFCFD',width: '138px',backgroundColor: '#23262F',padding: '13px',border: '1px solid #FCFCFD',height: '40px',textDecoration: 'none'}}> <a style={{textDecoration: 'none',color: 'white'}} href="#carusel"> Калькулятор цен</a></Button>
 {/* ---------------------------modalka----------------------------------------------- */}

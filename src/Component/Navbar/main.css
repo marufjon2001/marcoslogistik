@@ -8,4 +8,34 @@
         flex-direction: column !important;
         text-align: center !important;
     }
+    .searchinpu {
+        width: 300px !important;
+    }
+    .search {
+        margin-left: 250px !important;
+    }
+    .navbtnall {
+        margin-top: 10px !important;
+    }
+}
+@media (max-width:768px) {
+    .voyti {
+        width: 85% !important;
+    }
+    
+    .yeshyo {
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .searchinpu {
+        width: 300px !important;
+    }
+    .search {
+        margin-left: 250px !important;
+    }
+    .navbtnall {
+        margin-top: 10px !important;
+    }
 }
