@@ -1,7 +1,11 @@
 @media (max-width:400px) {
-    .navbar_text {
-        font-size: 505px !important;
-        color: red !important;
-        background-color: aqua !important;
+    .voyti {
+        width: 85% !important;
+    }
+    .yeshyo {
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        text-align: center !important;
     }
 }

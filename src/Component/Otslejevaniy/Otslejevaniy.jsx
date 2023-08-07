@@ -11,7 +11,7 @@ const Otslejevaniy = () => {
         <Box sx={{backgroundColor: '#FCFCFD',width: '100%',height: '100%'}}>
             <Navbarwhite/>
             <img style={{width: '100%'}} src={img} alt="" />
-            <Box className="posilkuuu">
+            <Box >
                 <Box sx={{position: 'relative',display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column'}}>
                     <br /><br />
                 <input type="search"placeholder='Введите трек-код' style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '16px',color: ' #72777A',width: '270px',height: '40px',paddingLeft: '10px',border: '2px solid black'}}/>
@@ -20,16 +20,16 @@ const Otslejevaniy = () => {
            </Box><br />
            <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '32px',color: '#23262F'}}>Посылка № NHJ78652365</Typography>
                 </Box>
-                <Box sx={{display: 'flex',justifyContent: 'center',gap: "4%"}} mt={8}>
-                    <Box sx={{backgroundColor: 'white',width: '32%',display: 'flex',justifyContent: 'center',padding: '25px',gap: '50px'}}>
-                        <Box>
+                <Box className="posilkuuu" sx={{display: 'flex',justifyContent: 'center',gap: "4%"}} mt={8}>
+                    <Box className="posilkuuu_Box" sx={{backgroundColor: 'white',width: '32%',display: 'flex',justifyContent: 'center',padding: '25px',gap: '50px'}}>
+                        <Box className="posilkuuu_Box">
                         <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '40px',color: '#23262F'}}>Данные о посылке</Typography>
                             <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '22px',color: '#72777A'}}>Номер заказа</Typography>
                             <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#23262F'}}>1231313</Typography><br /><br />
                             <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '22px',color: '#72777A'}}>Дата отправки</Typography>
                             <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#23262F'}}>18.11.2021</Typography>
                         </Box>
-                        <Box mt={2}>
+                        <Box  mt={2}>
                             <br />
                             <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '22px',color: '#72777A'}}>Адрес доставки</Typography>
                             <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#23262F'}}>Казахстан, г. <br /> Кызылорда,<br />
@@ -38,7 +38,7 @@ const Otslejevaniy = () => {
                             <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#23262F'}}>От двери до двери</Typography>
                         </Box>
                     </Box>
-                    <Box sx={{backgroundColor: 'white',width: '20%',padding: '25px'}}>
+                    <Box className="posilkuuu_Box" sx={{backgroundColor: 'white',width: '20%',padding: '25px'}}>
                         <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '16px',lineHeight: '40px',color: '#23262F'}}>Статус</Typography>
                         <Box>
                             <Box sx={{display: 'flex',gap: '20px'}}>                

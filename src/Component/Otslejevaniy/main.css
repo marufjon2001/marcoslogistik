@@ -1,6 +1,9 @@
 @media (max-width:400px) {
    .posilkuuu {
     width: 100% !important;
-    background-color: red !important;
+    flex-direction: column !important; 
+   }
+   .posilkuuu_Box {
+    width: 100% !important;
    }
 }

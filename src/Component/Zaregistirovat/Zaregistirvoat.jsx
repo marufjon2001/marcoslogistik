@@ -10,7 +10,7 @@ const App = () => {
   const increasePopulation = useStore((state) => state.increasePopulation)
   return (
     <>    
-      <Modal
+      <Modal 
         open={modal1Open}
         onOk={() => increasePopulation(false)}
         onCancel={() => increasePopulation(false)}
@@ -18,13 +18,13 @@ const App = () => {
       </Modal>
       <br />
       <br />
-      <Modal
+      <Modal 
         centered
         open={isFalse}
         onOk={() => increasePopulation(false)}
         onCancel={() => increasePopulation(false)}
       >
-        <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',padding: '30px 30px'}}>
+        <Box  sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',padding: '30px 30px'}}>
         <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '30px',lineHeight: '32px',color: '#23262F'}}>Зарегистрироватся</Typography>
         <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '20px',color: '#72777A',textAlign: 'center'}}>Заполните данные необходимые для <br /> регистрации</Typography>
         <br />
@@ -38,7 +38,7 @@ const App = () => {
       <br />
       <input type="text" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: '#72777A',padding: '8px',border: '1px solid #E3E5E6'}}  placeholder='Повторите пароль' />
         <br />
-        <Button style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '16px',lineHeight: '16px',color: 'white',height: '40px',width: '60%',backgroundColor: '#EA412B'}}>Зарегистрироваться</Button>
+        <Button className='zaregistr' style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '16px',lineHeight: '16px',color: 'white',height: '40px',width: '60%',backgroundColor: '#EA412B'}}>Зарегистрироваться</Button>
         <Typography style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '14px',lineHeight: '40px',color: '#23262F'}}>Уже зарегистрированы?<span style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#CB0E16',cursor: 'pointer'}}> Войти</span></Typography>
        </Box>
       </Modal>
