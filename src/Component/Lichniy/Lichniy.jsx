@@ -48,8 +48,8 @@ const Lichniy = () => {
                     </Link>
                     <br></br><br />
                     </Box>
-                } */}
-                {/* {
+                }
+                {
                     text ?<Box className="istory" sx={{width: '80%',position: 'relative'}}>
                         <Typography className="istory_tex" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '70px',color: '#23262F'}}>История отправлений</Typography>
                         <Box className="novybtn" sx={{display: 'flex',gap: '10px',flexWrap: 'wrap'}}>
