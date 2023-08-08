@@ -1,22 +1,3 @@
-@media (max-width:400px) {
-    .oplata {
-        width: 100% !important;
-    }
-    .oplatabtn {
-        width: 50% !important;
-    }
-    .koplate {
-        font-size: 20px !important;
-        line-height: 70px !important;
-    }
-    .zayafkaimg {
-        width: 100% !important;
-        margin-top: -8% !important;
-    }
-    .otmenabtn {
-        width: 100px !important;
-    }
-}
 @media (max-width:768px) {
     .oplata {
         width: 50% !important;
@@ -35,5 +16,24 @@
     }
     .otmenabtn {
         width: 180px !important;
+    }
+}
+@media (max-width:400px) {
+    .oplata {
+        width: 100% !important;
+    }
+    .oplatabtn {
+        width: 50% !important;
+    }
+    .koplate {
+        font-size: 20px !important;
+        line-height: 70px !important;
+    }
+    .zayafkaimg {
+        width: 100% !important;
+        margin-top: -8% !important;
+    }
+    .otmenabtn {
+        width: 100px !important;
     }
 }

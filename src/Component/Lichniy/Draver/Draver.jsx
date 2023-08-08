@@ -6,6 +6,7 @@ import Checkbox from '@mui/material/Checkbox';
 import map from "../../images/Lichniy/map.png"
 import Radio from '@mui/material/Radio';
 import { Link } from 'react-router-dom';
+import "../main.css"
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export default function SwipeableTemporaryDrawer() {

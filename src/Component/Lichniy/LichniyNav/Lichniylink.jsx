@@ -20,9 +20,9 @@ const Lichniy = () => {
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#979C9E'}}>Пароль</Typography>
                         <input className='inputtex' type='number' style={{width: '100%',height: '40px',border: '2px solid #E3E5E5',fontFamily: 'Inter',fontWeight: '400',fontSize: '16px',lineHeight: '16px',color: 'black'}}/>
                     </Box>
-                    <hr className='inputtex' style={{border: '1px solid black',width: '98%'}}/>
+                    <hr className='novybtn' style={{border: '1px solid black',width: '98%'}}/>
                     <Link style={{width: '100%'}} to={'/menu/Треккинг'}>
-                    <Button  className="danybtn" style={{fontWeight: '700',fontSize: '15px',lineHeight: '16px',color: 'white',backgroundColor: '#EA412B',height: '40px',width: '19%',padding: '10px'}}>Обновить данные</Button>
+                    <Button  className="lichniy_text" style={{fontWeight: '700',fontSize: '15px',lineHeight: '16px',color: 'white',backgroundColor: '#EA412B',height: '40px',width: '19%',padding: '10px'}}>Обновить данные</Button>
                     </Link>
                     </Box>
             </Box>

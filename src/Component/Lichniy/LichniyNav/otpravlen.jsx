@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import React,{useState} from 'react';
 import { Button, Typography} from '@mui/material';
 // import Draver from "../Lichniy/Draver/Draver"
-// import "./main.css"
+import "../main.css"
 import lichniy from "../../images/Lichniy/lichniy.png"
 import Draver from "../Draver/Draver"
 

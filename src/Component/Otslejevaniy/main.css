@@ -1,16 +1,16 @@
-@media (max-width:400px) {
+@media (max-width:768px) {
    .posilkuuu {
-    width: 100% !important;
-    flex-direction: column !important; 
+    width: 90% !important;
+   margin-left: 5% !important;
    }
    .posilkuuu_Box {
     width: 100% !important;
    }
 }
-@media (max-width:768px) {
+@media (max-width:400px) {
    .posilkuuu {
-    width: 90% !important;
-   margin-left: 5% !important;
+    width: 100% !important;
+    flex-direction: column !important; 
    }
    .posilkuuu_Box {
     width: 100% !important;

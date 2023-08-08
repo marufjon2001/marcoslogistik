@@ -1,3 +1,42 @@
+@media (max-width:768px) {
+    .lichniy {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .lichniy_text {
+        margin-top: 0px !important;
+        width: 75% !important;
+    }
+    .istory_tex {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .novybtn {
+     width: 75% !important;
+     display: flex !important; 
+     justify-content: center !important;
+    }
+    .hr {
+        margin-left: 100px !important;
+        width: 70% !important;
+    }
+    .danybtn {
+        width: 100% !important;
+    }
+    .draver {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .istory_tex {
+        margin-left:-20% !important;
+    }
+}
+
+
+
+
+
 @media (max-width:400px) {
     .lichniy {
         display: flex !important;
@@ -20,39 +59,10 @@
         margin-left: 30px !important;
         width: 80% !important;
     }
-}
-@media (max-width:768px) {
-    .lichniy {
-        display: flex !important;
-        justify-content: center !important;
-    }
-    .lichniy_text {
-        margin-top: 0px !important;
-        width: 100% !important;
-    }
-    .istory_tex {
-        margin-left: 10% !important;
-    }
-    .novybtn {
-     width: 100% !important;
-     margin-left: 10% !important;
-    }
-    .hr {
-        margin-left: 50px !important;
-        width: 100% !important;
-    }
-    .inputtex {
-        width: 100% !important;
-    }
     .danybtn {
-        width: 40% !important;
+        width: 100% !important;
     }
 }
-
-
-
-
-
 
 @media (max-width:768px) {
  .Navbarwhite {
@@ -62,6 +72,8 @@
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
+    flex-direction: column !important;
+    gap: 0px !important;
  }
 }
 @media (min-width:768px) {
