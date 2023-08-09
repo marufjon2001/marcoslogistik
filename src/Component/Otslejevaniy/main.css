@@ -1,3 +1,12 @@
+@media (max-width:1024px) {
+   .posilkuuu {
+    width: 90% !important;
+   margin-left: 5% !important;
+   }
+   .posilkuuu_Box {
+    width: 100% !important;
+   }
+}
 @media (max-width:768px) {
    .posilkuuu {
     width: 90% !important;

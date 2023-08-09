@@ -504,7 +504,7 @@ const Home = () => {
           <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '38px',color: '#23262F'}}>Отзывы от компании</Typography>
         </Box>
         <Box sx={{display: 'flex',justifyContent: 'center'}} mt={10}>
-          <Box sx={{width: '86%',display: 'flex',gap: '22px',zIndex: '100',flexWrap: 'wrap'}}>
+          <Box sx={{width: '86%',display: 'flex',gap: '22px',zIndex: '100'}}>
            {
             menejer.map((item,index)=>(
               <Box sx={{width: '32%',border: ' 2px solid #E3E5E6',backgroundColor: '#FFFFFF',padding: '30px'}}>
@@ -528,11 +528,11 @@ const Home = () => {
       <br /><br /><br />
       <Box  sx={{display: 'flex',justifyContent: 'center'}}>
         <Box className="kontakt" sx={{width: '86%',display: 'flex',alignItems: 'center',gap: '150px'}}mb={10}>
-           <Box>
+           <Box className="shaxristonmap">
             <a href="https://www.google.com/maps/dir/Eman+Group,+5+Djami+Square,+Tashkent+100057,+O%CA%BBzbekiston/Shahriston+ko'chasi,+Tashkent,+O%60zbekiston/@41.3542885,69.2477575,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x38ae8c92267a3301:0x3cb8b146e2b3910e!2m2!1d69.2538121!2d41.3555108!1m5!1m1!1s0x38ae8cae3ab5871f:0x15743fc46216c6e1!2m2!1d69.2772063!2d41.3521537?hl=UZ&entry=ttu" target="_blank"><img src={gps} alt="" /></a>
            </Box>
            <Box sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column'}}>
-            <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '86px',color: '#23262F'}}>Наши контакты</Typography>
+            <Typography className="nashi" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '32px',lineHeight: '86px',color: '#23262F'}}>Наши контакты</Typography>
             <a href="" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '20px',lineHeight: '40px',color: '#182F43',textDecoration: 'none'}}>+998(77)777-46-00</a>
             <a href="" style={{fontFamily: 'Inter',fontWeight: '400',fontSize: '20px',lineHeight: '40px',color: '#182F43',textDecoration: 'none'}}>info@marcos.uz</a>
             <Box sx={{display: 'flex'}}>

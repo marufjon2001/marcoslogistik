@@ -25,7 +25,7 @@ const Lichniy = () => {
             <Box className="lichniyres">
              <LichniyNav/>
             </Box>
-            <Box className="lichniy" sx={{display: 'flex',gap: '30px'}}mt={5}>
+            <Box className="Navbarwhite" sx={{display: 'flex',gap: '30px'}}mt={5}>
             <Box sx={{width: '17%'}}>
                     <Typography onClick={menuitem}style={text ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '40px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '40px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><Person2SharpIcon/> Профиль</Typography>
                     <Typography onClick={menuitem} style={text1 ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ManageHistorySharpIcon/>История отправлений</Typography>
@@ -80,7 +80,7 @@ const Lichniy = () => {
                             <Button style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '14px',lineHeight: '16px',color: '#23262F',height: '40px',border: '2px solid #E6E8EC'}}>В пути (20)</Button><br /><br />
                             <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '12px',lineHeight: '16px',color: '#72777A',display: 'flex',gap: '10px'}}>Дата отправки<img src={lichniy} alt="" /></Typography>
                             </Box>
-                            <Box>
+                            <Box className="dostavlen">
                             <Button style={{fontFamily: 'Inter',fontWeight: '600',fontSize: '14px',lineHeight: '16px',color: '#23262F',height: '40px',border: '2px solid #E6E8EC'}}>Доставлено (20)</Button><br /><br />
                             <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '12px',lineHeight: '16px',color: '#72777A',display: 'flex',gap: '10px'}}>Трек-номер<img src={lichniy} alt="" /></Typography>
                             </Box>

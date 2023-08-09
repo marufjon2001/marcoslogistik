@@ -1,6 +1,95 @@
 .slick-active button::before {
   display: none !important;
 }
+@media (max-width: 1024px) {
+  .text {
+    font-size: 24px !important;
+    line-height: 25px !important;
+  }
+  .text_1 {
+    width: 100% !important;
+    font-size: 17px !important;
+    margin-top: -10px !important;
+    line-height: 20px !important;
+  }
+  .button {
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    width: 16% !important;
+    height: 40px !important;
+  }
+  .onastext {
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+  .onass {
+    font-size: 24px !important;
+  }
+  .xarita_box {
+    width: 110% !important;
+  }
+  .xarita {
+    width: 800px !important;
+  }
+  .Москва {
+    width: 40% !important;
+    height: 70% !important;
+    padding: 10px !important;
+  }
+  .Москва_xarita {
+    width: 40% !important;
+    height: 60% !important;
+    margin-left: 72% !important;
+    margin-top: 30% !important;
+  }
+  .imglar {
+    border-radius: 50px;
+  }
+  /* .Часто {
+    font-size: 28px !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: 20px !important;
+  } */
+  .carusel {
+   width: 88% !important;
+   gap: 100px !important;
+  }
+  .skidka {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+  }
+  .caruselmenu {
+   width: 85% !important;
+  }
+  .moskva {
+   width: 105% !important;
+  }
+  .stoimost {
+   width: 400px !important;
+  }
+  .shaxristonmap {
+    width: 50% !important;
+  }
+  .nashi {
+    text-align: center !important;
+    line-height: 40px !important;
+  }
+  .carusel12 {
+   width: 100% !important;
+   overflow: hidden !important;
+  }
+  .carusell {
+   box-sizing: border-box;
+  }
+  .Высота {
+   width: 100% !important;
+   display: none !important;
+  }
+}
 @media (max-width: 768px) {
   .text {
     width: 59.2% !important;

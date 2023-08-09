@@ -1,3 +1,23 @@
+@media (max-width: 1024px) {
+   .posilku {
+    width: 160px !important;
+    font-size: 11px !important;
+   }
+   .redddd {
+    width: 75% !important;
+    padding: 15px !important;
+   }
+   
+   .input_1 {
+      width: 80% !important;
+   }
+   .inputtextare {
+      width: 84% !important;
+   }
+   .textarea {
+      width: 84% !important;
+   }
+}
 @media (max-width: 768px) {
    .posilku {
     width: 160px !important;
