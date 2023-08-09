@@ -26,9 +26,16 @@ const Lichniy = () => {
              <LichniyNav/>
             </Box>
             <Box className="lichniy" sx={{display: 'flex',gap: '30px'}}mt={5}>
-                {/* {
-                    text ?""
-                    :<Box className="lichniy_t" sx={{width: '75%',display:"flex",flexWrap: 'wrap',gap: '20px'}}>
+            <Box sx={{width: '17%'}}>
+                    <Typography onClick={menuitem}style={text ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '40px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '40px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><Person2SharpIcon/> Профиль</Typography>
+                    <Typography onClick={menuitem} style={text1 ?{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#23262F',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}:{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '16px',color: '#72777A',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ManageHistorySharpIcon/>История отправлений</Typography>
+                    <Link style={{textDecoration: 'none'}} to={'/menu/Oplata'}>
+                    <Typography style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '14px',lineHeight: '40px',color: '#EA412B',display: 'flex',alignItems: 'center',gap: '10px',cursor: 'pointer'}}><ExitToAppIcon/>Выйти</Typography>
+                    </Link>
+                </Box>
+                  {
+                    text1 ?""
+                    : <Box className="lichniy_t" sx={{width: '75%',display:"flex",flexWrap: 'wrap',gap: '20px'}}>
                     <Box sx={{width: '48%',}}mt={2}>
                         <Typography className='info' style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '32px',color: '#23262F'}}>Личная информация</Typography><br />
                         <Typography style={{fontFamily: 'Inter',fontWeight: '500',fontSize: '14px',lineHeight: '20px',color: '#979C9E'}}>ФИО</Typography>
@@ -50,7 +57,7 @@ const Lichniy = () => {
                     </Box>
                 }
                 {
-                    text ?<Box className="istory" sx={{width: '80%',position: 'relative'}}>
+                    text1 ?<Box className="istory" sx={{width: '80%',position: 'relative'}}>
                         <Typography className="istory_tex" style={{fontFamily: 'Inter',fontWeight: '700',fontSize: '24px',lineHeight: '70px',color: '#23262F'}}>История отправлений</Typography>
                         <Box className="novybtn" sx={{display: 'flex',gap: '10px',flexWrap: 'wrap'}}>
                             <Box>
@@ -83,7 +90,7 @@ const Lichniy = () => {
                     <br /><br /><br />
                     </Box>
                     :""
-                } */}
+                }  
             </Box>
         </Box>
     );
