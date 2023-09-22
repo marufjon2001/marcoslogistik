@@ -1,54 +1,41 @@
-import React from "react";
-import phone from "../../assets/Navbar/phone.svg"
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Navbartop from "./Navbartop/Navbartop";
 import nav from "../../assets/Navbar/nav.svg"
 import SearchIcon from '@mui/icons-material/Search';
 import Fab from '@mui/material/Fab';
-import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
+import PersonIcon from '@mui/icons-material/Person';
 
-const Navbar = () => {
+function NavScrollExample() {
+  // ctrl alt t menu
   return (
-    <div className="bg-nav  px-[11.11vw] py-[1.11vw]">
-      <div className="flex items-center gap-[45.06vw]">
-        <div className="flex gap-[1.66vw] cursor-pointer">
-          <h1 className="text-white font-Inter text-[0.83vw] font-[500]">
-            O компании
-          </h1>
-          <h1 className="text-white font-Inter text-[0.83vw] font-[500]">
-            Частые вопросы
-          </h1>
-          <h1 className="text-white font-Inter text-[0.83vw] font-[500]">
-            Сотрудничество
-          </h1>
+    <div>
+      <Navbartop/>
+    <Navbar expand="lg" className="px-[11.11vw] py-[2.77vw] bg-nav flex">
+      <Container fluid className="flex items-center gap-[16vw] pb-[1.66vw]">
+        <Navbar.Brand className="flex items-center gap-[3.32vw]">
+        <div>
+          <img className="w-[7.08vw] h-[2.77vw]" src={nav} alt="" />
         </div>
-        <div className="flex items-center gap-[0.55vw]">
-          <img className="cursor-pointer" src={phone} alt="" />
-          <a
-            style={{ textDecoration: "none" }}
-            className="text-white font-Inter text-[0.83vw] font-[500] flex items-center"
-            href="tel:(+998777774600)"
-          >
-            +998 (77) 777-46-00
-          </a>
+        <div className="relative">
+          <div className="w-[2.22vw] h-[2.22vw] bg-nav absolute ml-[16.5vw] mt-[0.4vw] flex items-center justify-center"><SearchIcon className="text-white"/></div>
+          <input type="text" placeholder="Введите трек-код" className="text-[#72777A] font-Inter text-[0.97vw] font-[400] w-[19vw] h-[2.77vw] outline-none px-[1vw]"/>
         </div>
-      </div>
-      <div className="pt-[2.77vw] pb-[1.66vw] text-white flex items-center gap-[20.76vw]">
-         <div className="flex gap-[3.32vw] relative">
-            <img className="w-[7.093vw] h-[2.47vw] cursor-pointer" src={nav} alt="" />
-            <div className="bg-nav w-[2.22vw] h-[2.22vw] z-20 ml-[24vw] mt-[0.3vw] absolute flex items-center justify-center cursor-pointer">
-            <SearchIcon/>
-            </div>
-            <input className="w-[19.02vw] h-[2.77vw] outline-none text-[#72777A] text-[0.97vw] font-[400] px-[0.83vw]" type="text" placeholder="Введите трек-код" />
-         </div>
-         <div className="flex items-center gap-[1.66vw]">
-           <button className="w-[11.97vw] h-[2.77vw] bg-[white] text-[#23262F] font-Inter font-[700] text-[0.97vw]">Оформить заявку</button>
-           <button style={{border: '1px solid white'}} className="w-[11.97vw] h-[2.77vw] bg-nav text-[white] font-Inter font-[700] text-[0.97vw]">Калькулятор цен</button>
-           <Fab className="w-[2.77vw] h-[2.77vw]" style={{boxShadow: 'none',backgroundColor: '#F2F4F5'}} size="small" aria-label="add">
-            <Person2OutlinedIcon className="w-[1.66vw] h-[1.66vw]"/>
-           </Fab>
-         </div>
-      </div>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll" >
+          <div className="flex gap-[1.66vw]">
+          <button className="w-[10.97vw] h-[2.77vw] text-nav font-Inter text-[0.97vw] font-[700] bg-[white]">Оформить заявку</button>
+          <button style={{border: "1px solid white"}} className="w-[10.97vw] h-[2.77vw] text-white font-Inter text-[0.97vw] font-[700] bg-nav">Калькулятор цен</button>
+          <Fab size="small" className="shadow-none w-[2.77vw] h-[2.77vw]" aria-label="add">
+           <PersonIcon className="text-nav w-[1.66vw] h-[1.66vw]"/>
+          </Fab>
+          </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     </div>
   );
-};
+}
 
-export default Navbar;
+export default NavScrollExample;
