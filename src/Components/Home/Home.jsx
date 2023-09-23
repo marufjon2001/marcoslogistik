@@ -5,6 +5,12 @@ import img1 from "../../assets/Home/img1.png";
 import img2 from "../../assets/Home/img2.png";
 import Swiper from "./Swiper.js/Swiper"
 
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 const HomePage = () => {
   return (
     <div className="relative">
@@ -77,9 +83,82 @@ const HomePage = () => {
         </div>
       </div>
 {/* --------------------Наши преимущества-------------- */}
-      <div className="px-[11.11vw] pt-[8.40vw]">
-        <h3 className="text-nav font-Inter text-[2.22vw] font-[700] leading-[2.63vw]">Наши преимущества</h3>
+      <div className="pl-[11.11vw] pt-[8.40vw] pr-[5vw]">
+        <h3 className="text-nav font-Inter text-[2.22vw] font-[700] leading-[2.63vw] pb-[5.62vw]">Наши преимущества</h3>
         <Swiper/>
+      </div>
+  {/* ---------------------Часто задаваемые вопросы--------------- */}
+      <div className="px-[11.11vw]">
+       <div className="flex justify-center items-center flex-col">
+        <h2 className="text-nav font-Inter text-[2.22vw] font-[700] leading-[2.63vw]">Часто задаваемые вопросы</h2>
+       <div className="flex gap-[1.11vw] pt-[3.33vw]">
+        <button className="bg-nav text-white py-[0.55vw] px-[1.11vw] font-Inter text-[0.97vw] font-[700] leading-[1.11vw]">Отправка</button>
+        <button className=" text-[#72777A] py-[0.55vw] px-[1.11vw] font-Inter text-[0.97vw] font-[700] leading-[1.11vw]">Оплата</button>
+        <button className=" text-[#72777A] py-[0.55vw] px-[1.11vw] font-Inter text-[0.97vw] font-[700] leading-[1.11vw]">Доставка</button>
+       </div>
+       <div className="flex flex-col justify-center items-center pt-[4.44vw]">
+       <Accordion style={{width: '37.77vw',boxShadow: 'none'}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className="flex gap-[1.66vw] text-black font-Inter text-[1.11vw] font-[500] leading-[1.66vw]"> <h4 className="text-[#72777A] font-Inter text-[1.46vw] font-[500] leading-[1.66vw]">1</h4> Как подготовить посылку</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+       <Accordion style={{width: '37.77vw',boxShadow: 'none'}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className="flex gap-[1.66vw] text-black font-Inter text-[1.11vw] font-[500] leading-[1.66vw]"> <h4 className="text-[#72777A] font-Inter text-[1.46vw] font-[500] leading-[1.66vw]">2</h4> Сроки доставки по Узбекистану</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+       <Accordion style={{width: '37.77vw',boxShadow: 'none'}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className="flex gap-[1.66vw] text-black font-Inter text-[1.11vw] font-[500] leading-[1.66vw]"> <h4 className="text-[#72777A] font-Inter text-[1.46vw] font-[500] leading-[1.66vw]">3</h4>Запрещенные к перевозке посылки</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+       <Accordion style={{width: '37.77vw',boxShadow: 'none'}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className="flex gap-[1.66vw] text-black font-Inter text-[1.11vw] font-[500] leading-[1.66vw]"> <h4 className="text-[#72777A] font-Inter text-[1.46vw] font-[500] leading-[1.66vw]">4</h4> Ограничения на перевозку</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+       </div>
+       </div>
       </div>
     </div>
   );
