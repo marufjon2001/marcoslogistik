@@ -1,0 +1,24 @@
+
+.slick-active button {
+    width: 25px !important;
+    display: flex !important;
+    gap: 10vw!important;
+    background-color: #CB0E16 !important;
+}
+.slick-dots {
+    width: 8vw !important;
+    display: flex !important;
+    margin-bottom: -5vw !important;
+    margin-left: -1.2vw !important;
+}
+.img {
+    width: 100%;
+    height: 100vh;
+    background-size: auto;
+    background-image: url(../../assets/Home/truck.png);
+}
+.liniy {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../assets//Home/liniy.png);
+}
