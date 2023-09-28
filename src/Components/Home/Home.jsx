@@ -110,7 +110,7 @@ const HomePage = () => {
   return (
     <div className="relative">
       <div className="px-[11.11vw] absolute pt-[8.33vw] w-[67.88vw]">
-        <h1 className="font-Inter text-[.77vw] font-[700] leading-[2.77vw] text-[white] pb-[1.11vw]">
+        <h1 className="font-Inter text-[2.77vw] font-[700] leading-[2.77vw] text-[white] pb-[1.11vw]">
           Решения для практически бесконечного числа потребностей в логистике
         </h1>
         <p className="text-[white] font-Inter text-[1.38vw] font-[400] leading-[1.38vw] w-[36vw] pb-[5.83vw]">
@@ -121,7 +121,7 @@ const HomePage = () => {
           Подробнее
         </button>
       </div>
-      <img className="w-[100%] h-[100vh]" src={Home} alt="" />
+      <img className="w-[100%] h-[85vh]" src={Home} alt="" />
       {/* -----------------О нас------------------ */}
       <div className="px-[11.11vw] pt-[5.55vw] w-[100%] flex items-center">
         <div className="w-[40%]">
