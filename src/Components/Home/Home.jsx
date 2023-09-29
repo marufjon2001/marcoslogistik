@@ -400,7 +400,7 @@ const HomePage = () => {
         </div>
       </div>
 {/* --------------- Yandex map --------------------- */}
-      <div className="px-[11.11vw] pt-[5.55vw] flex items-center gap-[11.38vw]">
+      <div className="px-[11.11vw] pt-[5.55vw] pb-[5.55vw] flex items-center gap-[11.38vw]">
         <div>
         <YMaps>
         <Map
