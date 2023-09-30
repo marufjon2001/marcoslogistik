@@ -25,17 +25,16 @@ const style = {
   border:"none"
 };
 
-function NavScrollExample() {
+function NavScrollExample({modalOne, handleClose, handleOpen, clickTwo}) {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  
   // ctrl alt t menu
   return (
     <div>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        open={open}
+        open={modalOne}
         onClose={handleClose}
         closeAfterTransition
         slots={{ backdrop: Backdrop }}
@@ -45,7 +44,7 @@ function NavScrollExample() {
           },
         }}
       >
-        <Fade in={open}>
+        <Fade in={modalOne}>
           <Box sx={style}>
             <div className="flex justify-center flex-col items-center text-center">
               <h5 className="text-nav font-Inter text-[2.22vw] font-[700]">
@@ -71,7 +70,7 @@ function NavScrollExample() {
               </button>
               <h4 className="text-nav font-Inter text-[0.97vw] font-[400] mt-[2.22vw]">
                 Еще не зарегистрированы?{" "}
-                <span className="text-[#CB0E16] font-Inter text-[0.97vw] font-[600]">
+                <span onClick={clickTwo} className="text-[#CB0E16] font-Inter text-[0.97vw] font-[600]">
                   Зарегистрироваться
                 </span>
               </h4>

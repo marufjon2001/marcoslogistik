@@ -17,19 +17,15 @@ const style = {
   border:"none"
 };
 
-function NavScrollExample() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+function NavScrollExample({clickCloseTwo, clickTwo, modalTwo}) {
   // ctrl alt t menu
   return (
     <div>
-        <button onClick={handleOpen}>click</button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        open={open}
-        onClose={handleClose}
+        open={modalTwo}
+        onClose={clickCloseTwo}
         closeAfterTransition
         slots={{ backdrop: Backdrop }}
         slotProps={{
@@ -38,34 +34,52 @@ function NavScrollExample() {
           },
         }}
       >
-        <Fade in={open}>
+        <Fade in={modalTwo}>
           <Box sx={style}>
             <div className="flex justify-center flex-col items-center text-center">
               <h5 className="text-nav font-Inter text-[2.22vw] font-[700]">
-                Вход в кабинет
+              Зарегистрироватся
               </h5>
               <p className="text-[#72777A] font-Inter font-[400] text-[1.66vw] pt-[0.83vw]">
-                Введите логин и пароль для входа в личный кабинет
+              Заполните данные необходимые для регистрации
               </p>
               <input
                 style={{ border: "2px solid #E3E5E5" }}
                 type="text"
-                placeholder="Введите E-mail"
-                className="font-Inter text-[1.11vw] font-[400] w-[24.44vw] h-[3.33vw] pl-[1vw]"
+                placeholder="Ваше ФИО"
+                className="font-Inter text-[1.11vw] font-[400] w-[24.44vw] h-[3.33vw] pl-[0.83vw]"
               />
               <input
                 style={{ border: "2px solid #E3E5E5" }}
                 type="text"
-                placeholder="Введите пароль"
+                placeholder="Ваше E-mail"
+                className="font-Inter text-[1.11vw] font-[400] w-[24.44vw] h-[3.33vw] pl-[1vw] mt-[0.83vw]"
+              />
+              <input
+                style={{ border: "2px solid #E3E5E5" }}
+                type="text"
+                placeholder="+998"
+                className="font-Inter text-[1.11vw] font-[400] w-[24.44vw] h-[3.33vw] pl-[1vw] mt-[0.83vw]"
+              />
+              <input
+                style={{ border: "2px solid #E3E5E5" }}
+                type="text"
+                placeholder="Придумайте пароль"
+                className="font-Inter text-[1.11vw] font-[400] w-[24.44vw] h-[3.33vw] pl-[1vw] mt-[0.83vw]"
+              />
+              <input
+                style={{ border: "2px solid #E3E5E5" }}
+                type="text"
+                placeholder="Повторите пароль"
                 className="font-Inter text-[1.11vw] font-[400] w-[24.44vw] h-[3.33vw] pl-[1vw] mt-[1vw]"
               />
               <button className="w-[24.44vw] h-[3.33vw] bg-[#EA412B] text-white font-Inter text-[1.11vw] font-[500] mt-[2.22vw]">
-                Войти
+              Зарегистрироваться
               </button>
-              <h4 className="text-nav font-Inter text-[0.97vw] font-[400] mt-[2.22vw]">
-                Еще не зарегистрированы?{" "}
+              <h4 className="text-nav font-Inter text-[0.97vw] font-[400] mt-[1.22vw]">
+              Уже зарегистрированы?{" "}
                 <span className="text-[#CB0E16] font-Inter text-[0.97vw] font-[600]">
-                  Зарегистрироваться
+                Войти
                 </span>
               </h4>
             </div>
